@@ -1220,5 +1220,152 @@ const fruitData = {
       { label: "Ploetz 2015 (Phytopathology) — TR4 threat", url: "https://doi.org/10.1094/PHYTO-01-15-0003-FI" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cavendish_banana" }
     ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  POMEGRANATES
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Wild Pomegranate": {
+    scientificName: "Punica granatum (wild)",
+    parents: [],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "The wild ancestor of all cultivated pomegranates, native to a belt stretching from Iran and the Caucasus through Central Asia to the Himalayas. Domesticated over 4,000 years ago — the fruit is referenced in ancient Egyptian records, the Old Testament, the Quran, and Greek mythology. Wild plants produce small, seedy, and tart fruit far removed from modern commercial varieties, which have been selected over millennia for larger arils, sweeter juice, and thinner skins.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate" }
+    ]
+  },
+
+  "Punica protopunica": {
+    scientificName: "Punica protopunica",
+    parents: [],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A relict wild species endemic to the island of Socotra (Yemen) — the only other species in genus Punica besides the cultivated pomegranate. Produces smaller fruit with pink flowers, dry arils, and a flavour quite unlike modern cultivars. Phylogenetically important as the closest living relative of Punica granatum, it is not a direct ancestor of any known cultivar but helps reconstruct the evolutionary history of the genus.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Punica_protopunica" }
+    ]
+  },
+
+  "Wonderful": {
+    scientificName: "Punica granatum 'Wonderful'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "The dominant commercial pomegranate in the United States, accounting for the majority of California's pomegranate acreage. Introduced from Europe to Florida around 1896 and subsequently brought to California's San Joaquin Valley, where it became the industry standard. Prized for its large size, deep red arils, rich sweet-tart juice, and thick skin suited to commercial handling. POM Wonderful, the leading US pomegranate brand, takes its name from this variety. Parentage is undocumented; an open-pollinated selection from wild Punica granatum stock.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wonderful_(pomegranate)" }
+    ]
+  },
+
+  "Granada": {
+    scientificName: "Punica granatum 'Granada'",
+    parents: ["Wonderful"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A bud sport (spontaneous branch mutation) of Wonderful, discovered in California and documented in pomological literature. Ripens two to three weeks earlier than Wonderful, giving growers an important commercial advantage in extending the harvest window. Fruit and flavour are nearly identical to Wonderful but with slightly softer arils. One of the few pomegranate varieties with a clearly documented parent.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Early Wonderful": {
+    scientificName: "Punica granatum 'Early Wonderful'",
+    parents: ["Wonderful"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "An early-ripening variant of Wonderful, likely a sport or open-pollinated seedling, widely planted in California as a companion to the standard Wonderful to extend the picking season. Produces fruit 1–2 weeks ahead of Wonderful with similar size and flavour characteristics. Exact parentage is undocumented, but horticultural records consistently treat it as a selection from Wonderful.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Angel Red": {
+    scientificName: "Punica granatum 'Angel Red'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A California-selected cultivar notable for its soft, virtually chewy arils (seed coats), which make it pleasant to eat whole without the tough crunch typical of most pomegranates. Produces very high juice yields with a deep ruby colour and sweet, slightly tart flavour. Evaluated by USDA-ARS and recommended for fresh-market consumption. Parentage undocumented; an open-pollinated seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Parfianka": {
+    scientificName: "Punica granatum 'Parfianka'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A Central Asian cultivar from the Turkmenistan–Uzbekistan region, introduced to the United States via USDA plant exploration in the 1980s. Regarded by many pomologists as one of the world's finest eating pomegranates: thin-skinned, with intensely flavoured, raspberry-like arils and very soft seeds. Its exceptional eating quality has made it popular among artisan growers and at premium farmers' markets, though its delicate skin limits commercial shelf life. Parentage undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Salavatski": {
+    scientificName: "Punica granatum 'Salavatski'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A cold-hardy pomegranate from the Salavatsky region of Bashkortostan, Russia, capable of surviving temperatures down to −15 °C (5 °F) — remarkable for a subtropical fruit. Large, deep-red fruit with sweet, richly flavoured juice. Widely grown across Russia and Eastern Europe where winters are too severe for most other pomegranate varieties. Parentage undocumented; a traditional open-pollinated selection from Central Asian/Caucasian stock.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Haku Botan": {
+    scientificName: "Punica granatum 'Haku Botan'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A Japanese white-fruited pomegranate whose name translates to 'white peony' in Japanese. Produces pale yellow-green skin and translucent, soft, pink-tinged arils with a sweet, low-acid flavour distinctly different from the tangy red varieties. Valued in Japan both as an ornamental for its white flowers and as an edible fruit. One of the few white-fleshed pomegranate cultivars in commercial cultivation. Parentage undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Mollar de Elche": {
+    scientificName: "Punica granatum 'Mollar de Elche'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "Spain's most celebrated pomegranate cultivar, grown in and around the city of Elche, Alicante, in the Valencia region. Granted EU Protected Designation of Origin (PDO) status in 2009, making it one of the few pomegranate varieties with legal geographic protection. Known for very large, brilliantly coloured fruit, soft edible seeds, and a sweet flavour with low acidity. Its cultivation in this region dates back over a thousand years, with Moorish agricultural traditions credited for its development.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mollar_de_Elche" }
+    ]
+  },
+
+  "Ganesh Pomegranate": {
+    scientificName: "Punica granatum 'Ganesh'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "One of India's most widely cultivated commercial pomegranate varieties, developed in Maharashtra and named after the Hindu deity Ganesha. Large, pinkish-red fruit with sweet, deep red arils and good shelf life suited to domestic and export markets. Extensively grown across Maharashtra, Karnataka, and Andhra Pradesh. One of the documented parents of the Bhagwa variety, making it a significant node in India's pomegranate breeding history. Parentage otherwise undocumented; a traditional seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate#Cultivars" }
+    ]
+  },
+
+  "Gul Shah Red": {
+    scientificName: "Punica granatum 'Gul Shah Red'",
+    parents: ["Wild Pomegranate"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "A traditional pomegranate variety from the Afghanistan–North India region, valued for its deep red colour and high juice content. Used as a parent in the Maharashtra State Horticulture breeding programme that produced Bhagwa. Its contribution to Bhagwa's vivid orange-red colouration and intense sweetness has been noted by breeders. Parentage otherwise undocumented; a landhrace variety from the historical pomegranate heartland of South Asia.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pomegranate" }
+    ]
+  },
+
+  "Bhagwa": {
+    scientificName: "Punica granatum 'Bhagwa'",
+    parents: ["Ganesh Pomegranate", "Gul Shah Red"],
+    category: "pomegranate",
+    emoji: "🔴",
+    description: "India's most commercially important export pomegranate, developed by deliberate cross-breeding at Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri, Maharashtra, as a cross of Ganesh and Gul Shah Red. The name means 'saffron-coloured' in Marathi, describing its vivid deep orange-red arils. Notable for large, uniform fruit, very sweet juice (16–17 °Brix), soft seeds, and excellent shelf life — qualities that have made it the dominant variety in Indian pomegranate export to Europe and the Middle East. Maharashtra's pomegranate industry, centred in Nasik and Solapur districts, relies primarily on Bhagwa.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bhagwa_(pomegranate)" }
+    ]
   }
 };

@@ -16,15 +16,16 @@
 
   // ── Colour palette ────────────────────────────────────────────────────────
   const COLORS = {
-    citrus:  '#f59e0b',
-    apple:   '#ef4444',
-    ancient: '#86c46e',
-    extinct: '#c4916a',
-    grape:   '#a855f7',
-    mango:   '#fb923c',
-    stone:   '#f472b6',
-    berry:   '#be123c',
-    banana:  '#eab308',
+    citrus:       '#f59e0b',
+    apple:        '#ef4444',
+    ancient:      '#86c46e',
+    extinct:      '#c4916a',
+    grape:        '#a855f7',
+    mango:        '#fb923c',
+    stone:        '#f472b6',
+    berry:        '#be123c',
+    banana:       '#eab308',
+    pomegranate:  '#dc143c',
   };
 
   function blendHex(hexA, hexB, t) {
@@ -289,7 +290,7 @@
   glowFilter.append('feComposite').attr('in', 'SourceGraphic').attr('in2', 'blur').attr('operator', 'over');
 
   // One vertical gradient per category-pair combination
-  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct', 'grape', 'mango', 'stone', 'berry', 'banana'];
+  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct', 'grape', 'mango', 'stone', 'berry', 'banana', 'pomegranate'];
   for (const fromCategory of NODE_CATEGORIES) {
     for (const toCategory of NODE_CATEGORIES) {
       const gradient = defs.append('linearGradient')

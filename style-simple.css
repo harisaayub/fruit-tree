@@ -248,7 +248,8 @@ main {
 .info-badge.mango   { background: #fff7ed; color: #c2410c; }
 .info-badge.stone   { background: #fdf2f8; color: #9d174d; }
 .info-badge.berry   { background: #fff1f2; color: #9f1239; }
-.info-badge.banana  { background: #fefce8; color: #854d0e; }
+.info-badge.banana      { background: #fefce8; color: #854d0e; }
+.info-badge.pomegranate { background: #fff0f2; color: #9f1239; }
 
 .info-desc {
   font-size: .82rem;

@@ -22,6 +22,7 @@
   --stone:       #f472b6;
   --berry:       #be123c;
   --banana:      #eab308;
+  --pomegranate: #dc143c;
   --shadow-sm:   0 2px 8px rgba(0,0,0,.4);
   --shadow-lg:   0 8px 32px rgba(0,0,0,.5);
   --glow-green:  0 0 20px rgba(94,240,160,.25);
@@ -235,6 +236,7 @@ header {
 .legend-dot.stone   { background: var(--stone);   box-shadow: 0 0 6px rgba(244,114,182,.5); }
 .legend-dot.berry   { background: var(--berry);   box-shadow: 0 0 6px rgba(190,18,60,.5); }
 .legend-dot.banana  { background: var(--banana);  box-shadow: 0 0 6px rgba(234,179,8,.5); }
+.legend-dot.pomegranate { background: var(--pomegranate); box-shadow: 0 0 6px rgba(220,20,60,.5); }
 .legend-dot.ancient { background: var(--ancient); box-shadow: 0 0 6px rgba(134,196,110,.5); border: 1px dashed var(--ancient); }
 .legend-dot.extinct { background: var(--extinct); box-shadow: 0 0 6px rgba(196,145,106,.5); border: 1px dashed var(--extinct); }
 
@@ -364,7 +366,8 @@ main {
 .info-badge.mango  { background: rgba(251,146,60,.12);  color: #fb923c; border-color: rgba(251,146,60,.3); }
 .info-badge.stone  { background: rgba(244,114,182,.12); color: #f472b6; border-color: rgba(244,114,182,.3); }
 .info-badge.berry  { background: rgba(190,18,60,.12);   color: #fb7185; border-color: rgba(190,18,60,.3); }
-.info-badge.banana { background: rgba(234,179,8,.12);   color: #facc15; border-color: rgba(234,179,8,.3); }
+.info-badge.banana      { background: rgba(234,179,8,.12);   color: #facc15; border-color: rgba(234,179,8,.3); }
+.info-badge.pomegranate { background: rgba(220,20,60,.12);  color: #f43f5e; border-color: rgba(220,20,60,.3); }
 
 .info-desc {
   font-size: .8rem;

@@ -11,15 +11,16 @@
 
   // ── Colour palette ────────────────────────────────────────────────────────
   const COLORS = {
-    citrus:  '#d97706',
-    apple:   '#dc2626',
-    ancient: '#3d7a5a',
-    extinct: '#c4916a',
-    grape:   '#a855f7',
-    mango:   '#fb923c',
-    stone:   '#f472b6',
-    berry:   '#be123c',
-    banana:  '#eab308',
+    citrus:       '#d97706',
+    apple:        '#dc2626',
+    ancient:      '#3d7a5a',
+    extinct:      '#c4916a',
+    grape:        '#a855f7',
+    mango:        '#fb923c',
+    stone:        '#f472b6',
+    berry:        '#be123c',
+    banana:       '#eab308',
+    pomegranate:  '#dc143c',
   };
   function blendHex(hexA, hexB, t) {
     const rA = parseInt(hexA.slice(1,3),16), gA = parseInt(hexA.slice(3,5),16), bA = parseInt(hexA.slice(5,7),16);
