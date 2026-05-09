@@ -17,6 +17,11 @@
   --focus-col:   #5ef0a0;
   --focus-bg:    #0b2017;
   --extinct:     #c4916a;
+  --grape:       #a855f7;
+  --mango:       #fb923c;
+  --stone:       #f472b6;
+  --berry:       #be123c;
+  --banana:      #eab308;
   --shadow-sm:   0 2px 8px rgba(0,0,0,.4);
   --shadow-lg:   0 8px 32px rgba(0,0,0,.5);
   --glow-green:  0 0 20px rgba(94,240,160,.25);
@@ -215,9 +220,15 @@ header {
   width: 9px; height: 9px;
   border-radius: 50%;
 }
-.legend-dot.citrus  { background: var(--citrus); box-shadow: 0 0 6px rgba(245,158,11,.5); }
-.legend-dot.apple   { background: var(--apple);  box-shadow: 0 0 6px rgba(239,68,68,.5); }
+.legend-dot.citrus  { background: var(--citrus);  box-shadow: 0 0 6px rgba(245,158,11,.5); }
+.legend-dot.apple   { background: var(--apple);   box-shadow: 0 0 6px rgba(239,68,68,.5); }
+.legend-dot.grape   { background: var(--grape);   box-shadow: 0 0 6px rgba(168,85,247,.5); }
+.legend-dot.mango   { background: var(--mango);   box-shadow: 0 0 6px rgba(251,146,60,.5); }
+.legend-dot.stone   { background: var(--stone);   box-shadow: 0 0 6px rgba(244,114,182,.5); }
+.legend-dot.berry   { background: var(--berry);   box-shadow: 0 0 6px rgba(190,18,60,.5); }
+.legend-dot.banana  { background: var(--banana);  box-shadow: 0 0 6px rgba(234,179,8,.5); }
 .legend-dot.ancient { background: var(--ancient); box-shadow: 0 0 6px rgba(134,196,110,.5); border: 1px dashed var(--ancient); }
+.legend-dot.extinct { background: var(--extinct); box-shadow: 0 0 6px rgba(196,145,106,.5); border: 1px dashed var(--extinct); }
 
 /* ── Main layout ─────────────────────────────────────────────────────────── */
 main {
