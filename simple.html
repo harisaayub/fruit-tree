@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Family Tree — Simple View</title>
+  <link rel="stylesheet" href="style-simple.css">
+</head>
+<body>
+
+  <header>
+    <div style="display:flex;align-items:baseline;justify-content:space-between">
+      <div>
+        <h1>Fruit Family Tree</h1>
+        <p class="subtitle">Explore the ancestry of your favourite fruits</p>
+      </div>
+      <a href="index.html" style="font-size:.78rem;color:var(--ancient);text-decoration:none;opacity:.8">Enhanced view →</a>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-wrapper">
+      <input type="text" id="search-input" placeholder="Search a fruit…" autocomplete="off" spellcheck="false">
+      <ul id="suggestions"></ul>
+    </div>
+
+    <div class="depth-controls">
+      <button id="btn-fewer" title="Fewer generations" disabled>−</button>
+      <span id="depth-label">1 generation</span>
+      <button id="btn-more" title="More generations">+</button>
+    </div>
+
+    <div class="legend">
+      <span class="legend-dot" style="background:#d97706"></span>Citrus
+      <span class="legend-dot" style="background:#dc2626; margin-left:10px"></span>Apple
+      <span class="legend-dot" style="background:#3d7a5a; margin-left:10px"></span>Ancient
+    </div>
+  </div>
+
+  <main>
+    <div id="graph-container">
+      <svg id="graph"></svg>
+      <div id="empty-state">
+        <div class="empty-icon">🌳</div>
+        <p>Search for a fruit above to explore its family tree</p>
+      </div>
+    </div>
+
+    <aside id="info-panel">
+      <div id="info-content">
+        <p class="info-hint">Click any fruit in the graph<br>or search above to begin.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="data.js"></script>
+  <script src="graph-simple.js"></script>
+</body>
+</html>

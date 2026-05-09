@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Family Tree</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-left">
+      <h1>🌿 Fruit Family Tree</h1>
+      <p class="subtitle">Explore the living genealogy of your favourite fruits</p>
+    </div>
+    <a href="simple.html" class="view-toggle">Simplified view</a>
+  </header>
+
+  <!-- ── Toolbar ────────────────────────────────────────────────────────── -->
+  <div class="toolbar">
+    <div class="search-wrapper">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search-input" placeholder="Search a fruit…" autocomplete="off" spellcheck="false">
+      <ul id="suggestions"></ul>
+    </div>
+
+    <div class="depth-controls">
+      <button id="btn-fewer" title="Fewer generations" disabled>−</button>
+      <span id="depth-label">1 generation</span>
+      <button id="btn-more" title="More generations">+</button>
+    </div>
+
+    <button id="btn-random" title="Random fruit" class="btn-icon">🎲</button>
+
+    <div class="legend">
+      <span class="legend-item"><span class="legend-dot citrus"></span>Citrus</span>
+      <span class="legend-item"><span class="legend-dot apple"></span>Apple</span>
+      <span class="legend-item"><span class="legend-dot ancient"></span>Ancient</span>
+    </div>
+  </div>
+
+  <!-- ── Main ───────────────────────────────────────────────────────────── -->
+  <main>
+    <div id="graph-container">
+      <svg id="graph"></svg>
+      <div id="empty-state">
+        <div class="empty-tree">
+          <div class="empty-leaf l1">🌿</div>
+          <div class="empty-leaf l2">🍃</div>
+          <div class="empty-leaf l3">🌿</div>
+        </div>
+        <p class="empty-title">Search for a fruit to begin</p>
+        <p class="empty-sub">Trace the ancestry of citrus, apples, and more</p>
+      </div>
+    </div>
+
+    <aside id="info-panel">
+      <div id="info-content">
+        <p class="info-hint">Search or click any node<br>to see its origins.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ── Suggestion FAB ─────────────────────────────────────────────────── -->
+  <button id="fab-suggest" title="Suggest a fruit to add">
+    <span class="fab-icon">＋</span>
+    <span class="fab-label">Suggest a fruit</span>
+  </button>
+
+  <!-- ── Suggestion modal ───────────────────────────────────────────────── -->
+  <dialog id="suggest-modal">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <h2>Suggest a Fruit</h2>
+        <p>Help us grow the tree. Fill in what you know — we'll verify the rest.</p>
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      </div>
+
+      <form id="suggest-form" novalidate>
+        <div class="form-row">
+          <label for="s-name">Common name <span class="req">*</span></label>
+          <input type="text" id="s-name" placeholder="e.g. Blood Lime" required>
+        </div>
+
+        <div class="form-row">
+          <label for="s-sci">Scientific name</label>
+          <input type="text" id="s-sci" placeholder="e.g. Citrus × wintersii">
+        </div>
+
+        <div class="form-row">
+          <label>Parents</label>
+          <div class="tag-field" id="parents-field">
+            <div class="tag-chips" id="parent-chips"></div>
+            <input type="text" id="parent-text" placeholder="Type a parent fruit…" autocomplete="off">
+          </div>
+          <ul class="tag-sugg" id="parent-sugg"></ul>
+        </div>
+
+        <div class="form-row two-col">
+          <div>
+            <label for="s-cat">Category</label>
+            <select id="s-cat">
+              <option value="citrus">Citrus</option>
+              <option value="apple">Apple</option>
+              <option value="stone">Stone fruit</option>
+              <option value="berry">Berry</option>
+              <option value="tropical">Tropical</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-emoji">Emoji</label>
+            <input type="text" id="s-emoji" placeholder="🍋" maxlength="2">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="s-desc">Description</label>
+          <textarea id="s-desc" rows="3" placeholder="Brief origin and flavour notes…"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="s-status">Status</label>
+          <select id="s-status">
+            <option value="">Common / Modern</option>
+            <option value="ancient">Ancient / Fundamental</option>
+            <option value="heritage">Heritage / Rare</option>
+            <option value="extinct">Extinct</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="modal-preview" id="modal-preview" style="display:none">
+        <p class="preview-label">JSON entry — paste into data.js:</p>
+        <pre id="preview-code"></pre>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-secondary" id="modal-cancel">Cancel</button>
+        <button class="btn-primary" id="modal-preview-btn">Preview JSON</button>
+        <button class="btn-copy" id="modal-copy" style="display:none">Copy to clipboard</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="data.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
