@@ -34,60 +34,96 @@
 
   // ── Subgraph builder ──────────────────────────────────────────────────────
   function subgraph(focusName, depth) {
-    const layerIndex = new Map();  // fruitName → layer number (negative = ancestor)
-    const seenEdges  = new Set();
-    const edges      = [];
-    layerIndex.set(focusName, 0);
+    const nodeSet = new Set([focusName]);
 
-    // BFS upward (ancestors). Each ancestor is assigned to its deepest possible
-    // layer so a node reachable as both parent and grandparent appears at the
-    // grandparent level — sitting above the nodes it gives rise to.
+    // Phase 1 — collect nodes (pure BFS, no layer logic)
     let frontier = [focusName];
-    for (let generation = 1; generation <= depth; generation++) {
+    for (let gen = 0; gen < depth; gen++) {
       const nextFrontier = [];
       for (const fruitName of frontier) {
         for (const parentName of (fruitData[fruitName]?.parents ?? [])) {
-          const edgeKey = `${parentName}|${fruitName}`;
-          if (!seenEdges.has(edgeKey)) {
-            seenEdges.add(edgeKey);
-            edges.push({ src: parentName, tgt: fruitName });
-          }
-          const currentLayer = layerIndex.get(parentName);
-          if (currentLayer === undefined || -generation < currentLayer) {
-            layerIndex.set(parentName, -generation);
-            nextFrontier.push(parentName);  // re-queue so its own parents also shift deeper
-          }
+          if (!nodeSet.has(parentName)) { nodeSet.add(parentName); nextFrontier.push(parentName); }
         }
       }
       frontier = nextFrontier;
     }
-
-    // BFS downward (descendants). Each descendant is assigned to its shallowest
-    // (closest) layer so the view stays compact.
     frontier = [focusName];
-    const visitedDescendants = new Set([focusName]);
-    for (let generation = 1; generation <= depth; generation++) {
+    for (let gen = 0; gen < depth; gen++) {
       const nextFrontier = [];
       for (const fruitName of frontier) {
         for (const childName of (childrenByFruit[fruitName] ?? [])) {
-          const edgeKey = `${fruitName}|${childName}`;
-          if (!seenEdges.has(edgeKey)) {
-            seenEdges.add(edgeKey);
-            edges.push({ src: fruitName, tgt: childName });
-          }
-          if (!layerIndex.has(childName)) layerIndex.set(childName, generation);
-          if (!visitedDescendants.has(childName)) {
-            visitedDescendants.add(childName);
-            nextFrontier.push(childName);
-          }
+          if (!nodeSet.has(childName)) { nodeSet.add(childName); nextFrontier.push(childName); }
         }
       }
       frontier = nextFrontier;
     }
 
-    const nodes = Array.from(layerIndex, ([id, layer]) => ({
+    // Phase 2 — collect all edges between visible nodes (catches cross-edges too)
+    const edges = [];
+    for (const fruitName of nodeSet) {
+      for (const parentName of (fruitData[fruitName]?.parents ?? [])) {
+        if (nodeSet.has(parentName)) edges.push({ src: parentName, tgt: fruitName });
+      }
+    }
+
+    // Phase 3 — topological sort (Kahn's)
+    const childrenInGraph = new Map();
+    const parentsInGraph  = new Map();
+    const topoInDegree    = new Map();
+    for (const name of nodeSet) {
+      childrenInGraph.set(name, []);
+      parentsInGraph.set(name, []);
+      topoInDegree.set(name, 0);
+    }
+    for (const { src, tgt } of edges) {
+      topoInDegree.set(tgt, topoInDegree.get(tgt) + 1);
+      childrenInGraph.get(src).push(tgt);
+      parentsInGraph.get(tgt).push(src);
+    }
+    const topoOrder = [];
+    const topoQueue = [];
+    for (const [name, deg] of topoInDegree) { if (deg === 0) topoQueue.push(name); }
+    let qi = 0;
+    while (qi < topoQueue.length) {
+      const name = topoQueue[qi++];
+      topoOrder.push(name);
+      for (const child of childrenInGraph.get(name)) {
+        topoInDegree.set(child, topoInDegree.get(child) - 1);
+        if (topoInDegree.get(child) === 0) topoQueue.push(child);
+      }
+    }
+
+    // Phase 4 — layer assignment via longest-path DP in both directions.
+    // Ancestors get layer = -(longest path from that node to focus).
+    // Descendants get layer = +(longest path from focus to that node).
+    // This ensures every node sits strictly below all its visible parents.
+
+    // Forward pass: longest path from focus to each descendant
+    const distFromFocus = new Map([[focusName, 0]]);
+    for (const name of topoOrder) {
+      if (!distFromFocus.has(name)) continue;
+      const d = distFromFocus.get(name);
+      for (const child of childrenInGraph.get(name)) {
+        const cur = distFromFocus.get(child);
+        if (cur === undefined || d + 1 > cur) distFromFocus.set(child, d + 1);
+      }
+    }
+
+    // Backward pass: longest path from each ancestor to focus
+    const distToFocus = new Map([[focusName, 0]]);
+    for (let i = topoOrder.length - 1; i >= 0; i--) {
+      const name = topoOrder[i];
+      if (!distToFocus.has(name)) continue;
+      const d = distToFocus.get(name);
+      for (const parent of parentsInGraph.get(name)) {
+        const cur = distToFocus.get(parent);
+        if (cur === undefined || d + 1 > cur) distToFocus.set(parent, d + 1);
+      }
+    }
+
+    const nodes = Array.from(nodeSet, id => ({
       id,
-      layer,
+      layer: distToFocus.has(id) ? -distToFocus.get(id) : (distFromFocus.get(id) ?? 0),
       fd: fruitData[id] ?? { parents: [], category: '', scientificName: '', description: '', emoji: '' },
     }));
 

@@ -681,3 +681,50 @@ textarea { resize: vertical; min-height: 72px; }
 .btn-copy:hover { background: rgba(94,240,160,.25); }
 
 .copy-ok { color: var(--ancient) !important; }
+
+/* ── Mobile ───────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Header — tighten and drop subtitle */
+  header { padding: 9px 14px; }
+  .header-left h1 { font-size: 1rem; }
+  .subtitle { display: none; }
+
+  /* Toolbar — search gets its own full-width row; controls wrap below it */
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    padding: 7px 12px;
+  }
+  .search-wrapper { flex-basis: 100%; max-width: none; order: -1; }
+  .legend { display: none; }
+  #depth-label { min-width: 72px; font-size: .74rem; }
+
+  /* Main layout — stack vertically so graph is on top */
+  main { flex-direction: column; }
+
+  /* Info panel — bottom strip instead of right sidebar */
+  #info-panel {
+    width: 100%;
+    max-height: 38dvh;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+
+  /* FAB — float above the info strip, show icon only */
+  #fab-suggest {
+    bottom: calc(38dvh + 12px);
+    right: 14px;
+    width: 48px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  #fab-suggest .fab-label { display: none; }
+
+  /* Modal — use nearly full screen */
+  dialog { width: calc(100vw - 20px); max-height: 94dvh; }
+  .modal-inner { padding: 18px 14px; }
+  .form-row.two-col { flex-direction: column; }
+  .modal-actions { flex-wrap: wrap; }
+}
