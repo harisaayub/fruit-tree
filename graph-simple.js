@@ -307,7 +307,7 @@
         // aligned with the target so the arrowhead orientation is always correct.
         let h = 0;
         for (const c of (src ?? '') + '|' + (tgt ?? '')) h = (h * 31 + c.charCodeAt(0)) & 0xffff;
-        const jitter = (h % 24) - 12;
+        const jitter = (h % 12) - 6;   // −6 … +6 px, source side only
         const cpX1 = sourceNode.x + nudge + arcSign * arcOffset + jitter;
         const cpX2 = targetNode.x - nudge + arcSign * arcOffset;
         return `M${sourceNode.x},${sourceBottomY} C${cpX1},${midY} ${cpX2},${midY} ${targetNode.x},${targetTopY}`;
