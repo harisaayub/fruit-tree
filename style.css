@@ -208,17 +208,17 @@ header {
 .legend {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: .74rem;
+  gap: 7px;
   color: var(--muted);
   margin-left: auto;
   flex-shrink: 0;
 }
-.legend-item { display: flex; align-items: center; gap: 5px; }
 .legend-dot {
   display: inline-block;
-  width: 9px; height: 9px;
+  width: 11px; height: 11px;
   border-radius: 50%;
+  cursor: default;
+  flex-shrink: 0;
 }
 .legend-dot.citrus  { background: var(--citrus);  box-shadow: 0 0 6px rgba(245,158,11,.5); }
 .legend-dot.apple   { background: var(--apple);   box-shadow: 0 0 6px rgba(239,68,68,.5); }

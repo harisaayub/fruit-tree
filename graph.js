@@ -20,22 +20,41 @@
     apple:   '#ef4444',
     ancient: '#86c46e',
     extinct: '#c4916a',
-    focus:   '#5ef0a0',
     grape:   '#a855f7',
     mango:   '#fb923c',
     stone:   '#f472b6',
     berry:   '#be123c',
     banana:  '#eab308',
   };
-  const FOCUS_BACKGROUND = '#0b2017';
-  const FOCUS_TEXT_COLOR = '#e8fce8';
+
+  function blendHex(hexA, hexB, t) {
+    const rA = parseInt(hexA.slice(1,3),16), gA = parseInt(hexA.slice(3,5),16), bA = parseInt(hexA.slice(5,7),16);
+    const rB = parseInt(hexB.slice(1,3),16), gB = parseInt(hexB.slice(3,5),16), bB = parseInt(hexB.slice(5,7),16);
+    const r = Math.round(rA + (rB - rA) * t);
+    const g = Math.round(gA + (gB - gA) * t);
+    const b = Math.round(bA + (bB - bA) * t);
+    return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+  }
+
+  // Focus highlight palette derived from the node's own category colour
+  function focusBgColor(node)   { return blendHex('#0b1410', nodeColor(node), 0.22); }
+  function focusTextColor(node) { return blendHex('#d8d0c4', nodeColor(node), 0.5);  }
 
   function nodeCategory(node) {
     if (node.fd.extinct) return 'extinct';
     if (node.fd.parents.length === 0) return 'ancient';
     return node.fd.category || 'other';
   }
-  function nodeColor(node) { return COLORS[nodeCategory(node)] ?? '#888'; }
+  // Ancient (wild) nodes blend the ancient green with their family colour so
+  // their lineage is visually clear while keeping the "wild ancestor" feel.
+  function nodeColor(node) {
+    const cat = nodeCategory(node);
+    if (cat === 'ancient') {
+      const catColor = node.fd.category && COLORS[node.fd.category];
+      return catColor ? blendHex(COLORS.ancient, catColor, 0.5) : COLORS.ancient;
+    }
+    return COLORS[cat] ?? '#888';
+  }
   function nodeFillColor(node) {
     const hex = nodeColor(node);
     const red   = parseInt(hex.slice(1, 3), 16);
@@ -222,19 +241,27 @@
   }
 
   // ── Edge path helpers ─────────────────────────────────────────────────────
-  function edgePath({ sourceNode, targetNode }) {
+  function edgePath({ sourceNode, targetNode, src, tgt }) {
     const sourceBottomY = sourceNode.y + NODE_HEIGHT / 2;
     const targetTopY    = targetNode.y - NODE_HEIGHT / 2;
     const midY          = (sourceBottomY + targetTopY) / 2;
-    // When source and target share the same x the bezier is a perfectly vertical
-    // line, giving it a zero-width bounding box. SVG spec §13.4 says
-    // objectBoundingBox gradient references are not applied to such elements —
-    // the edge would be invisible without this nudge.
+    // objectBoundingBox gradients fail on zero-width boxes (vertical paths).
     const horizontalNudge = Math.abs(targetNode.x - sourceNode.x) < 2 ? 30 : 0;
+    // Long-range edges arc outward to avoid routing visually through intermediate
+    // nodes. The arc direction follows which side has more horizontal space.
+    const layerSpan = Math.abs((targetNode.layer ?? 0) - (sourceNode.layer ?? 0));
+    const arcOffset = layerSpan > 1 ? (layerSpan - 1) * 55 : 0;
+    const arcSign   = sourceNode.x <= targetNode.x ? 1 : -1;
+    // Small deterministic jitter per edge so overlapping lines are distinguishable.
+    let h = 0;
+    for (const c of (src ?? '') + '|' + (tgt ?? '')) h = (h * 31 + c.charCodeAt(0)) & 0xffff;
+    const jitter = (h % 24) - 12;  // −12 … +12 px
+    const cpX1 = sourceNode.x + horizontalNudge + arcSign * arcOffset + jitter;
+    const cpX2 = targetNode.x - horizontalNudge + arcSign * arcOffset + jitter;
     return (
       `M${sourceNode.x},${sourceBottomY} ` +
-      `C${sourceNode.x + horizontalNudge},${midY} ` +
-      `${targetNode.x - horizontalNudge},${midY} ` +
+      `C${cpX1},${midY} ` +
+      `${cpX2},${midY} ` +
       `${targetNode.x},${targetTopY}`
     );
   }
@@ -267,11 +294,11 @@
       gradient.append('stop')
         .attr('offset', '0%')
         .attr('stop-color', COLORS[fromCategory] ?? '#888')
-        .attr('stop-opacity', .72);  // brighter at the ancestor (source) end
+        .attr('stop-opacity', .3);   // dim at the ancestor (source) end
       gradient.append('stop')
         .attr('offset', '100%')
-        .attr('stop-color', COLORS[toCategory] ?? '#888')
-        .attr('stop-opacity', .28);  // fades toward the child (destination) end
+        .attr('stop-color', '#ffffff')
+        .attr('stop-opacity', .88);  // bright white at the child (destination) end
     }
   }
 
@@ -356,13 +383,13 @@
     const isAncient = datum => datum.fd.parents.length === 0 && !datum.fd.extinct;
 
     selection.select('.node-glow')
-      .attr('stroke', datum => isFocused(datum) ? COLORS.focus : 'none')
-      .attr('opacity', datum => isFocused(datum) ? .45 : 0)
+      .attr('stroke', datum => isFocused(datum) ? nodeColor(datum) : 'none')
+      .attr('opacity', datum => isFocused(datum) ? .6 : 0)
       .attr('filter',  datum => isFocused(datum) ? 'url(#glow)' : null);
 
     selection.select('.node-pill')
-      .attr('fill',             datum => isFocused(datum) ? FOCUS_BACKGROUND : nodeFillColor(datum))
-      .attr('stroke',           datum => isFocused(datum) ? COLORS.focus     : nodeColor(datum))
+      .attr('fill',             datum => isFocused(datum) ? focusBgColor(datum) : nodeFillColor(datum))
+      .attr('stroke',           datum => nodeColor(datum))
       .attr('stroke-width',     datum => isFocused(datum) ? 2.5 : 1.5)
       .attr('stroke-dasharray', datum => isAncient(datum) && !isFocused(datum) ? '7,3' : null);
 
@@ -375,9 +402,10 @@
       const textLines  = breakIntoLines(datum.id);
       const lineHeight = 14;
       const fontSize   = textLines.length > 1 ? 10.5 : 12;
-      const textColor  = isFocused(datum) ? FOCUS_TEXT_COLOR
-                       : isAncient(datum) ? '#c8e0b8'
-                       : '#ccc4b4';
+      const ancientText = isAncient(datum)
+        ? blendHex('#c8e0b8', blendHex(nodeColor(datum), '#ffffff', 0.5), 0.35)
+        : '#ccc4b4';
+      const textColor  = isFocused(datum) ? focusTextColor(datum) : ancientText;
       const labelX = isFocused(datum) ? NODE_WIDTH / 2 : NODE_WIDTH / 2 + 4;
 
       labelGroup.selectAll('text').remove();

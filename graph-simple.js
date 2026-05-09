@@ -21,8 +21,17 @@
     berry:   '#be123c',
     banana:  '#eab308',
   };
-  const FOCUS_BACKGROUND = '#1a3828';
-  const FOCUS_TEXT_COLOR = '#ffffff';
+  function blendHex(hexA, hexB, t) {
+    const rA = parseInt(hexA.slice(1,3),16), gA = parseInt(hexA.slice(3,5),16), bA = parseInt(hexA.slice(5,7),16);
+    const rB = parseInt(hexB.slice(1,3),16), gB = parseInt(hexB.slice(3,5),16), bB = parseInt(hexB.slice(5,7),16);
+    const r = Math.round(rA + (rB - rA) * t);
+    const g = Math.round(gA + (gB - gA) * t);
+    const b = Math.round(bA + (bB - bA) * t);
+    return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+  }
+
+  function focusBgColor(node)   { return blendHex('#e8f5ee', nodeColor(node), 0.25); }
+  function focusTextColor(node) { return blendHex('#1a1a1a', nodeColor(node), 0.55); }
 
   // ── Children lookup (inverse of fruitData.parents) ───────────────────────
   const childrenByFruit = {};
@@ -203,16 +212,19 @@
   // ── Color helpers ─────────────────────────────────────────────────────────
   const NODE_CATEGORIES = Object.keys(COLORS);  // ['citrus', 'apple', 'ancient']
 
-  function nodeColor(node) {
-    if (node.fd.extinct) return COLORS.extinct;
-    if (node.fd.parents.length === 0) return COLORS.ancient;
-    return COLORS[node.fd.category] ?? '#888';
-  }
   function nodeCategory(node) {
     if (node.fd.extinct) return 'extinct';
     if (node.fd.parents.length === 0) return 'ancient';
     const cat = node.fd.category || '';
     return NODE_CATEGORIES.includes(cat) ? cat : 'ancient';
+  }
+  function nodeColor(node) {
+    if (node.fd.extinct) return COLORS.extinct;
+    if (node.fd.parents.length === 0) {
+      const catColor = node.fd.category && COLORS[node.fd.category];
+      return catColor ? blendHex(COLORS.ancient, catColor, 0.5) : COLORS.ancient;
+    }
+    return COLORS[node.fd.category] ?? '#888';
   }
   function edgeGradientId(sourceNode, targetNode) {
     return `eg-${nodeCategory(sourceNode)}-${nodeCategory(targetNode)}`;
@@ -235,9 +247,9 @@
         .attr('id', `eg-${fromCat}-${toCat}`)
         .attr('x1', '0%').attr('y1', '0%').attr('x2', '0%').attr('y2', '100%');
       gradient.append('stop').attr('offset', '0%')
-        .attr('stop-color', COLORS[fromCat]).attr('stop-opacity', .72);
+        .attr('stop-color', COLORS[fromCat]).attr('stop-opacity', .25);
       gradient.append('stop').attr('offset', '100%')
-        .attr('stop-color', COLORS[toCat]).attr('stop-opacity', .28);
+        .attr('stop-color', COLORS[toCat]).attr('stop-opacity', 1);
     }
   }
 
@@ -268,6 +280,8 @@
     const edgeData = edges
       .filter(edge => nodeById.has(edge.src) && nodeById.has(edge.tgt))
       .map(edge => ({
+        src:        edge.src,
+        tgt:        edge.tgt,
         sourceNode: nodeById.get(edge.src),
         targetNode: nodeById.get(edge.tgt),
       }));
@@ -280,15 +294,22 @@
       .attr('stroke', ({ sourceNode, targetNode }) => `url(#${edgeGradientId(sourceNode, targetNode)})`)
       .attr('stroke-width', 1.5)
       .attr('marker-end', 'url(#arr)')
-      .attr('d', ({ sourceNode, targetNode }) => {
+      .attr('d', ({ sourceNode, targetNode, src, tgt }) => {
         const sourceBottomY = sourceNode.y + NODE_HEIGHT / 2;
         const targetTopY    = targetNode.y - NODE_HEIGHT / 2;
         const midY          = (sourceBottomY + targetTopY) / 2;
-        // Nudge control points when source and target share the same x — a perfectly
-        // vertical bezier has a zero-width bounding box, which causes SVG to ignore
-        // objectBoundingBox gradient references, making the edge invisible.
         const nudge = Math.abs(targetNode.x - sourceNode.x) < 2 ? 30 : 0;
-        return `M${sourceNode.x},${sourceBottomY} C${sourceNode.x + nudge},${midY} ${targetNode.x - nudge},${midY} ${targetNode.x},${targetTopY}`;
+        // Long-range edges arc outward to avoid passing through intermediate nodes.
+        const layerSpan = Math.abs((targetNode.layer ?? 0) - (sourceNode.layer ?? 0));
+        const arcOffset = layerSpan > 1 ? (layerSpan - 1) * 55 : 0;
+        const arcSign   = sourceNode.x <= targetNode.x ? 1 : -1;
+        // Deterministic per-edge jitter for visual distinction.
+        let h = 0;
+        for (const c of (src ?? '') + '|' + (tgt ?? '')) h = (h * 31 + c.charCodeAt(0)) & 0xffff;
+        const jitter = (h % 24) - 12;
+        const cpX1 = sourceNode.x + nudge + arcSign * arcOffset + jitter;
+        const cpX2 = targetNode.x - nudge + arcSign * arcOffset + jitter;
+        return `M${sourceNode.x},${sourceBottomY} C${cpX1},${midY} ${cpX2},${midY} ${targetNode.x},${targetTopY}`;
       });
 
     // ── Nodes ──────────────────────────────────────────────────────────────
@@ -318,7 +339,7 @@
       .attr('class', 'pill')
       .attr('width', NODE_WIDTH).attr('height', NODE_HEIGHT)
       .attr('rx', NODE_RADIUS).attr('ry', NODE_RADIUS)
-      .attr('fill',         node => isFocused(node) ? FOCUS_BACKGROUND : '#ffffff')
+      .attr('fill',         node => isFocused(node) ? focusBgColor(node) : '#ffffff')
       .attr('stroke',       node => nodeColor(node))
       .attr('stroke-width', node => isFocused(node) ? 2.5 : 1.5);
 
@@ -328,7 +349,7 @@
       const textLines  = breakIntoLines(node.id);
       const lineHeight = 15;
       const fontSize   = textLines.length > 1 ? 10.5 : 12;
-      const textColor  = isFocused(node) ? FOCUS_TEXT_COLOR : '#2a2620';
+      const textColor  = isFocused(node) ? focusTextColor(node) : '#2a2620';
 
       textLines.forEach((lineText, lineIndex) => {
         labelGroup.append('text')
