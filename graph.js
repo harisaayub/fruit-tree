@@ -252,12 +252,14 @@
     const layerSpan = Math.abs((targetNode.layer ?? 0) - (sourceNode.layer ?? 0));
     const arcOffset = layerSpan > 1 ? (layerSpan - 1) * 55 : 0;
     const arcSign   = sourceNode.x <= targetNode.x ? 1 : -1;
-    // Small deterministic jitter per edge so overlapping lines are distinguishable.
+    // Jitter only on the source-side control point so each edge has a unique
+    // curve shape while the destination-side tangent stays aligned with the
+    // target node — keeping the arrowhead orientation correct.
     let h = 0;
     for (const c of (src ?? '') + '|' + (tgt ?? '')) h = (h * 31 + c.charCodeAt(0)) & 0xffff;
     const jitter = (h % 24) - 12;  // −12 … +12 px
     const cpX1 = sourceNode.x + horizontalNudge + arcSign * arcOffset + jitter;
-    const cpX2 = targetNode.x - horizontalNudge + arcSign * arcOffset + jitter;
+    const cpX2 = targetNode.x - horizontalNudge + arcSign * arcOffset;
     return (
       `M${sourceNode.x},${sourceBottomY} ` +
       `C${cpX1},${midY} ` +
