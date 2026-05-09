@@ -1031,7 +1031,7 @@ const fruitData = {
     emoji: "🍒",
     description: "One of the oldest commercial sweet cherry varieties in the Pacific Northwest, introduced around 1860 by Seth Lewelling's orchard in Oregon. Dark-skinned, firm, and somewhat bitter. Its main importance today is as a founding parent of the Bing cherry, the most commercially significant sweet cherry in North America.",
     links: [
-      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bing_cherry#History" }
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Black_Republican_cherry" }
     ]
   },
 
