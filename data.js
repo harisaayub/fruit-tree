@@ -812,6 +812,116 @@ const fruitData = {
     ]
   },
 
+  "Alphonso Mango": {
+    scientificName: "Mangifera indica 'Alphonso'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "India's 'King of Mangoes,' cultivated in the Konkan region of Maharashtra since the 16th century. Named after Afonso de Albuquerque, the Portuguese viceroy of India (1509–1515), whose missionaries introduced grafting techniques in Goa to develop firmer, sweeter fruit for export to Europe. Known locally as Hapus. Parentage is undocumented — a chance seedling selection of the Portuguese colonial era.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alphonso_mango" }
+    ]
+  },
+
+  "Dashehari Mango": {
+    scientificName: "Mangifera indica 'Dashehari'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A prized North Indian mango originating as a chance seedling in Dashehari village near Kakori, Lucknow in the 18th century, said to have been discovered in a nobleman's orchard during the Nawab era. It gave rise to the 'Mango Belt' of Malihabad, Uttar Pradesh, which today produces the largest volumes. Known for its thin skin, sweet fibreless flesh, and distinctively mild aroma. Also spelled Dusari, Dussehri, or Dusehri. Parentage undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dasheri" }
+    ]
+  },
+
+  "Langra Mango": {
+    scientificName: "Mangifera indica 'Langra'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A historic variety from Varanasi (Benares), Uttar Pradesh, cultivated for over 250 years and named — according to local legend — after a disabled farmer who tended the original seedling tree near a Shiva temple. Distinctive for retaining green skin even when fully ripe. Widely grown across Uttar Pradesh, Haryana, and Punjab, and popular in Pakistan. Parentage undocumented; a traditional open-pollinated seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Langra" }
+    ]
+  },
+
+  "Kesar Mango": {
+    scientificName: "Mangifera indica 'Kesar'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A premium Gujarat mango first selected in 1931 on the slopes of the Girnar Hills near Junagadh and named 'Kesar' (saffron) in 1934 by Nawab Muhammad Mahabat Khan III for the saffron-orange colour of its flesh. Granted Geographical Indication status in 2011 — the first agricultural product to receive GI protection from Gujarat. Grown across 20,000 hectares in Junagadh and Amreli districts. Parentage undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gir_Kesar" }
+    ]
+  },
+
+  "Totapuri Mango": {
+    scientificName: "Mangifera indica 'Totapuri'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A large South Indian mango from Andhra Pradesh, recognisable by its distinctive elongated, parrot-beak shape (totapuri means 'parrot face' in Telugu). Widely grown across Andhra Pradesh, Karnataka, and Tamil Nadu and prized for processing into pickles, chutneys, and pulp. Exported to Florida in 1901 under the name Sandersha. Parentage undocumented; a traditional regional seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Totapuri" }
+    ]
+  },
+
+  "Banganapalli Mango": {
+    scientificName: "Mangifera indica 'Banganapalli'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A large, golden-yellow mango from Banganapalle village in Nandyal District, Andhra Pradesh, with sweet, virtually fibre-free flesh. Named the state fruit of Andhra Pradesh and granted Geographical Indication status on 3 May 2017. Also called Safeda. One of India's most commercially significant export varieties. Parentage undocumented; a long-established local seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Banganapalle_(mango)" }
+    ]
+  },
+
+  "Chaunsa Mango": {
+    scientificName: "Mangifera indica 'Chaunsa'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "Pakistan's most celebrated export mango, named after Chausa, Bihar to commemorate the Mughal victory at the Battle of Chausa (1539). Originally developed through grafting in Malihabad, India, saplings were brought to Sindh after Partition (1947), where the variety flourished. Known for its exceptionally sweet, creamy, and aromatic flesh. Pakistan exports large quantities to the Middle East and Europe annually. Parentage undocumented; a traditional seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chaunsa" }
+    ]
+  },
+
+  "Sindhri Mango": {
+    scientificName: "Mangifera indica 'Sindhri'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "Named after Sindhri town in Mirpur Khas District, Sindh, where it has been cultivated for generations. Pakistan's largest mango by size and one of its most commercially important varieties, grown across Sindh and southern Punjab. Valued for its sweet, golden flesh and pleasant aroma. A traditional open-pollinated seedling selection with undocumented parentage.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sindhri" }
+    ]
+  },
+
+  "Anwar Ratol Mango": {
+    scientificName: "Mangifera indica 'Anwar Ratol'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A small, intensely sweet Pakistani mango with roots in Rataul village, Baghpat, Uttar Pradesh. Saplings were brought to Multan after Partition (1947), where the variety became a national symbol prized for diplomatic gifting — Pakistan has sent Anwar Ratol as 'mango diplomacy' gifts since 1981. Its honey-like sweetness and aromatic fragrance make it one of the most sought-after varieties despite its small size and fragile shelf life. Parentage undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Anwar_Ratol" }
+    ]
+  },
+
+  "Fajri Mango": {
+    scientificName: "Mangifera indica 'Fajri'",
+    parents: ["Wild Mango"],
+    category: "mango",
+    emoji: "🥭",
+    description: "A large Pakistani commercial mango cultivar valued for its size, attractive appearance, and good shelf life — qualities that make it popular for export and festive display. Has greenish-yellow skin and pale, mildly sweet flesh that is less intensely flavoured than Chaunsa or Anwar Ratol. Widely grown in Sindh and southern Punjab. Parentage undocumented; a traditional seedling selection.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mango" }
+    ]
+  },
+
   // ── Stone Fruits ──────────────────────────────────────────────────────────
 
   "Peach": {
