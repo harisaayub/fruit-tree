@@ -14,6 +14,12 @@
     citrus:  '#d97706',
     apple:   '#dc2626',
     ancient: '#3d7a5a',
+    extinct: '#c4916a',
+    grape:   '#a855f7',
+    mango:   '#fb923c',
+    stone:   '#f472b6',
+    berry:   '#be123c',
+    banana:  '#eab308',
   };
   const FOCUS_BACKGROUND = '#1a3828';
   const FOCUS_TEXT_COLOR = '#ffffff';
@@ -195,9 +201,21 @@
   }
 
   // ── Color helpers ─────────────────────────────────────────────────────────
+  const NODE_CATEGORIES = Object.keys(COLORS);  // ['citrus', 'apple', 'ancient']
+
   function nodeColor(node) {
+    if (node.fd.extinct) return COLORS.extinct;
     if (node.fd.parents.length === 0) return COLORS.ancient;
     return COLORS[node.fd.category] ?? '#888';
+  }
+  function nodeCategory(node) {
+    if (node.fd.extinct) return 'extinct';
+    if (node.fd.parents.length === 0) return 'ancient';
+    const cat = node.fd.category || '';
+    return NODE_CATEGORIES.includes(cat) ? cat : 'ancient';
+  }
+  function edgeGradientId(sourceNode, targetNode) {
+    return `eg-${nodeCategory(sourceNode)}-${nodeCategory(targetNode)}`;
   }
 
   // ── One-time SVG setup ────────────────────────────────────────────────────
@@ -207,7 +225,23 @@
     .on('zoom', event => scene.attr('transform', event.transform));
   svg.call(zoom).on('dblclick.zoom', null);
 
-  svg.append('defs').append('marker')
+  const defs = svg.append('defs');
+
+  // Per-category-pair edge gradients — brighter at the ancestor end, fading
+  // toward the child end so the direction of each line is immediately clear.
+  for (const fromCat of NODE_CATEGORIES) {
+    for (const toCat of NODE_CATEGORIES) {
+      const gradient = defs.append('linearGradient')
+        .attr('id', `eg-${fromCat}-${toCat}`)
+        .attr('x1', '0%').attr('y1', '0%').attr('x2', '0%').attr('y2', '100%');
+      gradient.append('stop').attr('offset', '0%')
+        .attr('stop-color', COLORS[fromCat]).attr('stop-opacity', .72);
+      gradient.append('stop').attr('offset', '100%')
+        .attr('stop-color', COLORS[toCat]).attr('stop-opacity', .28);
+    }
+  }
+
+  defs.append('marker')
     .attr('id', 'arr')
     .attr('viewBox', '0 -4 8 8')
     .attr('refX', 8).attr('refY', 0)
@@ -243,14 +277,18 @@
       .data(edgeData)
       .join('path')
       .attr('fill', 'none')
-      .attr('stroke', '#c8b898')
+      .attr('stroke', ({ sourceNode, targetNode }) => `url(#${edgeGradientId(sourceNode, targetNode)})`)
       .attr('stroke-width', 1.5)
       .attr('marker-end', 'url(#arr)')
       .attr('d', ({ sourceNode, targetNode }) => {
         const sourceBottomY = sourceNode.y + NODE_HEIGHT / 2;
         const targetTopY    = targetNode.y - NODE_HEIGHT / 2;
         const midY          = (sourceBottomY + targetTopY) / 2;
-        return `M${sourceNode.x},${sourceBottomY} C${sourceNode.x},${midY} ${targetNode.x},${midY} ${targetNode.x},${targetTopY}`;
+        // Nudge control points when source and target share the same x — a perfectly
+        // vertical bezier has a zero-width bounding box, which causes SVG to ignore
+        // objectBoundingBox gradient references, making the edge invisible.
+        const nudge = Math.abs(targetNode.x - sourceNode.x) < 2 ? 30 : 0;
+        return `M${sourceNode.x},${sourceBottomY} C${sourceNode.x + nudge},${midY} ${targetNode.x - nudge},${midY} ${targetNode.x},${targetTopY}`;
       });
 
     // ── Nodes ──────────────────────────────────────────────────────────────
@@ -327,12 +365,15 @@
     const fruit = fruitData[state.focus];
     if (!fruit) return;
     const offspring = childrenByFruit[state.focus] ?? [];
-    const isAncient = fruit.parents.length === 0;
+    const isAncient  = fruit.parents.length === 0 && !fruit.extinct;
+    const isExtinct  = !!fruit.extinct;
 
-    const badgeClass = isAncient ? 'ancient' : (fruit.category || '');
-    const badgeLabel = isAncient
-      ? 'Ancient / Fundamental'
-      : (fruit.category.charAt(0).toUpperCase() + fruit.category.slice(1));
+    const badgeClass = isExtinct ? 'extinct' : isAncient ? 'ancient' : (fruit.category || '');
+    const badgeLabel = isExtinct
+      ? 'Extinct Variety'
+      : isAncient
+        ? 'Ancient / Fundamental'
+        : (fruit.category.charAt(0).toUpperCase() + fruit.category.slice(1));
 
     const fruitChips = names => names
       .map(name => `<button class="chip" data-name="${name}">${name}</button>`)

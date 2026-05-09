@@ -21,6 +21,11 @@
     ancient: '#86c46e',
     extinct: '#c4916a',
     focus:   '#5ef0a0',
+    grape:   '#a855f7',
+    mango:   '#fb923c',
+    stone:   '#f472b6',
+    berry:   '#be123c',
+    banana:  '#eab308',
   };
   const FOCUS_BACKGROUND = '#0b2017';
   const FOCUS_TEXT_COLOR = '#e8fce8';
@@ -253,7 +258,7 @@
   glowFilter.append('feComposite').attr('in', 'SourceGraphic').attr('in2', 'blur').attr('operator', 'over');
 
   // One vertical gradient per category-pair combination
-  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct'];
+  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct', 'grape', 'mango', 'stone', 'berry', 'banana'];
   for (const fromCategory of NODE_CATEGORIES) {
     for (const toCategory of NODE_CATEGORIES) {
       const gradient = defs.append('linearGradient')
@@ -262,11 +267,11 @@
       gradient.append('stop')
         .attr('offset', '0%')
         .attr('stop-color', COLORS[fromCategory] ?? '#888')
-        .attr('stop-opacity', .65);
+        .attr('stop-opacity', .72);  // brighter at the ancestor (source) end
       gradient.append('stop')
         .attr('offset', '100%')
         .attr('stop-color', COLORS[toCategory] ?? '#888')
-        .attr('stop-opacity', .65);
+        .attr('stop-opacity', .28);  // fades toward the child (destination) end
     }
   }
 
