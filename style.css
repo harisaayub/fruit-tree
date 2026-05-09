@@ -207,17 +207,25 @@ header {
 
 .legend {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 7px;
+  gap: 4px 10px;
+  font-size: .72rem;
   color: var(--muted);
   margin-left: auto;
-  flex-shrink: 0;
+  max-width: 280px;
+  justify-content: flex-end;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
 .legend-dot {
   display: inline-block;
-  width: 11px; height: 11px;
+  width: 9px; height: 9px;
   border-radius: 50%;
-  cursor: default;
   flex-shrink: 0;
 }
 .legend-dot.citrus  { background: var(--citrus);  box-shadow: 0 0 6px rgba(245,158,11,.5); }
