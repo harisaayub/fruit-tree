@@ -29,6 +29,12 @@
     pepper:       '#22c55e',
     tomato:       '#ff6347',
     pear:         '#a3e635',
+    strawberry:   '#f43f5e',
+    brassica:     '#06b6d4',
+    coffee:       '#92400e',
+    avocado:      '#4d7c0f',
+    blueberry:    '#3b82f6',
+    kiwi:         '#0d9488',
   };
 
   function blendHex(hexA, hexB, t) {
@@ -293,7 +299,7 @@
   glowFilter.append('feComposite').attr('in', 'SourceGraphic').attr('in2', 'blur').attr('operator', 'over');
 
   // One vertical gradient per category-pair combination
-  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct', 'grape', 'mango', 'stone', 'berry', 'banana', 'pomegranate', 'pepper', 'tomato', 'pear'];
+  const NODE_CATEGORIES = ['ancient', 'citrus', 'apple', 'extinct', 'grape', 'mango', 'stone', 'berry', 'banana', 'pomegranate', 'pepper', 'tomato', 'pear', 'strawberry', 'brassica', 'coffee', 'avocado', 'blueberry', 'kiwi'];
   for (const fromCategory of NODE_CATEGORIES) {
     for (const toCategory of NODE_CATEGORIES) {
       const gradient = defs.append('linearGradient')

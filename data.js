@@ -1970,5 +1970,1061 @@ const fruitData = {
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asian_pear" }
     ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  STRAWBERRIES — Wild species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Woodland Strawberry": {
+    scientificName: "Fragaria vesca",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "The woodland or alpine strawberry, native to Europe and Asia and the most widely distributed diploid Fragaria species. Cultivated since antiquity for its small but intensely flavoured fruit and still eaten fresh across Europe. A key model organism in fruit genetics research due to its small genome and ease of transformation, helping scientists understand the octoploid genome of the modern garden strawberry.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fragaria_vesca" }
+    ]
+  },
+
+  "Virginia Strawberry": {
+    scientificName: "Fragaria virginiana",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A wild octoploid strawberry native to eastern North America, prized by colonists and Native Americans for its exceptional sweetness and intense flavour despite small fruit size. Shipped to Europe from the early 1600s, where it was grown in botanical gardens — and ultimately hybridised with the Chilean Strawberry around 1750 to produce the modern garden strawberry. Contributes intense flavour and cold hardiness to all its descendants.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fragaria_virginiana" }
+    ]
+  },
+
+  "Chilean Strawberry": {
+    scientificName: "Fragaria chiloensis",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A large-fruited wild octoploid strawberry native to coastal Chile and the Pacific shores of North America, with dense, thick leaves adapted to salty sea air. Collected by the French spy-botanist Amédée-François Frézier in 1714 and brought to France, where it accidentally cross-pollinated with Virginia Strawberry — the event that created the modern garden strawberry. Contributes the large fruit size found in all commercial cultivars today.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fragaria_chiloensis" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  STRAWBERRIES — Garden strawberry and cultivars
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Garden Strawberry": {
+    scientificName: "Fragaria × ananassa",
+    parents: ["Virginia Strawberry", "Chilean Strawberry"],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "The modern cultivated strawberry — an octoploid hybrid (2n = 8x = 56) created around 1750 in Brittany, France when Virginia and Chilean strawberry plants grown in proximity spontaneously cross-pollinated. Botanist Antoine Nicolas Duchesne documented its hybrid origin and distinctive pineapple-like scent in 1766, naming it ananassa ('pineapple-scented'). Every commercial strawberry in the world is either Fragaria × ananassa or a cultivar derived from it.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Garden_strawberry" }
+    ]
+  },
+
+  "Mulberry Strawberry": {
+    scientificName: "Fragaria × ananassa 'Mulberry'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    heritage: true,
+    description: "An early European garden strawberry cultivar grown in the 1830s, named for its dark, mulberry-like colouration. Used by Charles Mason Hovey of Cambridge, Massachusetts as one of the two parents in his 1836 cross that produced the Hovey strawberry — the first American fruit cultivar produced by deliberate artificial hybridisation. Its own parentage is undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Charles_Mason_Hovey" }
+    ]
+  },
+
+  "Hovey": {
+    scientificName: "Fragaria × ananassa 'Hovey'",
+    parents: ["Mulberry Strawberry", "Virginia Strawberry"],
+    category: "strawberry",
+    emoji: "🍓",
+    heritage: true,
+    extinct: true,
+    description: "Created in 1836 by Charles Mason Hovey of Cambridge, Massachusetts as a cross of the European 'Mulberry' cultivar with a Virginia Strawberry clone — the first fruit cultivar in America produced from deliberate artificial cross-breeding. Larger and hardier than contemporary varieties, it founded the New England strawberry industry and was grown commercially until around 1890. Hovey published his breeding methods in his 1837 Magazine of Horticulture.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Charles_Mason_Hovey" }
+    ]
+  },
+
+  "Royal Sovereign": {
+    scientificName: "Fragaria × ananassa 'Royal Sovereign'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    heritage: true,
+    description: "Developed by Thomas Laxton of the Laxton Brothers nursery in Bedford, England in 1892 as a cross of 'Noble' and 'King of the Earlies' — two now-obscure historical cultivars. Received a First Class Certificate from the Royal Horticultural Society on release and became enormously successful in English cultivation, combining European flavour with American robustness. A foundational cultivar for 20th-century European breeding programmes.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Royal_Sovereign_strawberry" }
+    ]
+  },
+
+  "Gorella": {
+    scientificName: "Fragaria × ananassa 'Gorella'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A Dutch strawberry cultivar released in 1960 from the CPRO-DLO breeding programme (Centre for Plant Breeding and Reproduction Research, Netherlands). Notable for large size, bright red glossy skin, and red flesh. One of the most commercially important Dutch cultivars of the mid-20th century and a direct parent of Elsanta — the variety that came to dominate European fresh markets in the 1980s–90s.",
+    links: [
+      { label: "ISHS 1999", url: "https://ishs.org/ishs-article/439_12/" }
+    ]
+  },
+
+  "Holiday": {
+    scientificName: "Fragaria × ananassa 'Holiday'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A Dutch strawberry cultivar used extensively in breeding programmes and QTL mapping studies. Its own parentage is undocumented in the scientific literature. Primarily known through its role as one parent of Elsanta (Holiday × Gorella, released 1981), which became the dominant commercial strawberry in Europe — making Holiday's genetics foundational to modern European production despite the variety itself being little grown.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/List_of_strawberry_cultivars" }
+    ]
+  },
+
+  "Elsanta": {
+    scientificName: "Fragaria × ananassa 'Elsanta'",
+    parents: ["Holiday", "Gorella"],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A major commercial strawberry developed in the Netherlands by crossing Holiday and Gorella, selected in 1975 and released in 1981. Mid-season, with excellent flavour, firm flesh, and outstanding keeping quality that made it ideal for long-distance export — qualities that made it the dominant variety across European supermarkets through the 1990s and 2000s. Widely used as a parent in subsequent breeding programmes worldwide.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/List_of_strawberry_cultivars" }
+    ]
+  },
+
+  "Douglas": {
+    scientificName: "Fragaria × ananassa 'Douglas'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A UC Davis strawberry cultivar released in 1979, bred as part of the California winter strawberry programme. Dominated the California fresh market in the early 1980s before Chandler took over. Critically, Douglas became a shared parent of both Chandler (1983) and Seascape (1991) — two of the most important UC Davis cultivars of the era — making it a key hub in Californian strawberry genealogy.",
+    links: [
+      { label: "UC Davis Strawberry Breeding", url: "https://strawberry.ucdavis.edu/" }
+    ]
+  },
+
+  "Selva": {
+    scientificName: "Fragaria × ananassa 'Selva'",
+    parents: [],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A UC Davis day-neutral (everbearing) strawberry released in 1983, one of the first commercially successful day-neutral cultivars capable of producing fruit across multiple seasons rather than only in spring. Its continuous-production habit made it revolutionary for California's year-round market supply. Used as one parent of Seascape (1991), which inherited and improved on Selva's everbearing trait.",
+    links: [
+      { label: "UC Davis Strawberry Breeding", url: "https://strawberry.ucdavis.edu/" }
+    ]
+  },
+
+  "Chandler": {
+    scientificName: "Fragaria × ananassa 'Chandler'",
+    parents: ["Douglas"],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A high-quality short-day cultivar developed at UC Davis from a 1977 cross of Douglas with an unregistered UC Davis breeding selection (Cal 72.361-105). Released commercially in 1983 and patented (USPP5262P), it dominated the California winter and spring market through the 1980s and into the mid-1990s with its large fruit size, excellent flavour, and high productivity. One of the most commercially successful UC Davis strawberry releases.",
+    links: [
+      { label: "UC Davis Strawberry Breeding", url: "https://strawberry.ucdavis.edu/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/List_of_strawberry_cultivars" }
+    ]
+  },
+
+  "Seascape": {
+    scientificName: "Fragaria × ananassa 'Seascape'",
+    parents: ["Selva", "Douglas"],
+    category: "strawberry",
+    emoji: "🍓",
+    description: "A day-neutral strawberry developed at UC Davis from a 1983 cross of Selva and Douglas, first fruited in 1984 and released in 1991–92. Reliable and productive across spring through autumn, it improved on Selva's everbearing habit while combining Douglas's fruit quality. Widely used as a parent in subsequent UC Davis breeding and remains commercially grown in coastal California for premium fresh markets.",
+    links: [
+      { label: "UC Davis Strawberry Breeding", url: "https://strawberry.ucdavis.edu/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/List_of_strawberry_cultivars" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BRASSICA — Wild progenitor species (Triangle of U)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Wild Cabbage": {
+    scientificName: "Brassica oleracea",
+    parents: [],
+    category: "brassica",
+    emoji: "🌿",
+    description: "The wild ancestor of almost all cultivated brassica vegetables, still found growing naturally on coastal limestone sea cliffs from Spain to the British Isles. First cultivated by ancient Greeks and Romans, this single species underwent directed selection for different plant parts — leaves, stems, flowers, buds — eventually yielding kale, cabbage, kohlrabi, Brussels sprouts, broccoli, and cauliflower, among others. One of the most morphologically plastic crop species in the world.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_oleracea" }
+    ]
+  },
+
+  "Brassica rapa": {
+    scientificName: "Brassica rapa",
+    parents: [],
+    category: "brassica",
+    emoji: "🌱",
+    description: "A diploid Brassica species (genome AA) native to temperate Asia and one of three founding species in the Triangle of U — the genomic model of Brassica crop evolution. Domesticated independently into turnips and Asian leafy greens (bok choy, napa cabbage, mizuna). Serves as one parent genome in the allopolyploid species Brassica napus (rapeseed/canola) and Brassica juncea (brown mustard).",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_rapa" }
+    ]
+  },
+
+  "Brassica nigra": {
+    scientificName: "Brassica nigra",
+    parents: [],
+    category: "brassica",
+    emoji: "🌱",
+    description: "A diploid Brassica species (genome BB) native to the Mediterranean and tropical Africa, cultivated for its pungent black mustard seeds used in condiments and cooking. One of three founding species in the Triangle of U. Contributed its BB genome to the allopolyploid crops Brassica juncea (Indian mustard) and Brassica carinata (Ethiopian mustard) through ancient natural hybridisation events.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_nigra" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BRASSICA — Cultivar groups (direct selections from Wild Cabbage)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Kale": {
+    scientificName: "Brassica oleracea var. sabellica",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🥬",
+    description: "The oldest cultivated form of Brassica oleracea, grown since at least the 5th century BC and the cultivar group closest to the wild ancestor in appearance. Selected for enlarged, frilly or flat leaves rather than head formation. Genomic studies confirm kale's position as one of the most genetically diverse and primitive cultivar groups — effectively a direct continuation of early Mediterranean domestication without the dramatic morphological reorganisation seen in cabbage or cauliflower.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kale" }
+    ]
+  },
+
+  "Cabbage": {
+    scientificName: "Brassica oleracea var. capitata",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🥬",
+    description: "Selected from wild cabbage for the formation of a dense, overlapping leafy head — a trait that arose through directed selection for terminal bud enlargement. First described as a distinct cultivar in the 1st century AD and adopted across Europe as a winter staple. The heading habit is genomically distinct from the flowering-arrest trait that produces broccoli and cauliflower, representing an independent domestication pathway within B. oleracea.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cabbage" }
+    ]
+  },
+
+  "Savoy Cabbage": {
+    scientificName: "Brassica oleracea var. sabauda",
+    parents: ["Cabbage"],
+    category: "brassica",
+    emoji: "🥬",
+    description: "A crinkled-leaf variant that emerged within the heading cabbage lineage through regional selection in Savoy, France, producing its distinctive deeply veined, rumpled foliage. The savoyed texture increases surface area and creates a milder, more complex flavour than smooth-leaf cabbage when cooked. Represents a secondary divergence within the capitata cultivar group rather than an independent selection from the wild ancestor.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Savoy_cabbage" }
+    ]
+  },
+
+  "Kohlrabi": {
+    scientificName: "Brassica oleracea var. gongylodes",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🥬",
+    description: "Selected for lateral meristem growth producing a swollen, globe-shaped stem — unique among B. oleracea cultivars in being selected for stem tissue rather than leaves, flowers, or buds. First recorded in northern European cultivation in 1554, likely descended from marrow-stemmed kale varieties known in ancient Rome. The swollen stem contains the same nutrients as other brassicas but in a crunchy, water-rich form that remains distinctive in global cuisines.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kohlrabi" }
+    ]
+  },
+
+  "Brussels Sprouts": {
+    scientificName: "Brassica oleracea var. gemmifera",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🫛",
+    description: "Selected for the enlargement of axillary (side) buds along the main stem, producing miniature cabbage-like heads at each leaf node rather than a terminal head. Named for Brussels, Belgium, where cultivation intensified from the 13th century onward, though the mutation may have arisen earlier. The most recently developed major Brassica cultivar group and the one requiring the most specific developmental redirection from the wild type.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brussels_sprout" }
+    ]
+  },
+
+  "Broccoli": {
+    scientificName: "Brassica oleracea var. italica",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🥦",
+    description: "An Italian selection dating to ancient Roman cultivation, developed by arresting the plant's flowering process to retain tender, edible immature flower heads. Part of the 'arrested inflorescence' domestication pathway — selecting for plants that delay opening their flowers as long as possible. A 2024 Nature Genetics genomic study confirmed that broccoli is the direct ancestor of cauliflower, which arose through secondary selection for curd formation within the broccoli lineage.",
+    links: [
+      { label: "Nature Genetics 2024", url: "https://www.nature.com/articles/s41588-024-01744-4" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Broccoli" }
+    ]
+  },
+
+  "Cauliflower": {
+    scientificName: "Brassica oleracea var. botrytis",
+    parents: ["Broccoli"],
+    category: "brassica",
+    emoji: "🥦",
+    description: "A secondary selection from within the broccoli lineage, confirmed by 2024 Nature Genetics genomic sequencing to have evolved from broccoli through stepwise domestication. Selected for mutations in the CAULIFLOWER1 and FRUITFULL genes that redirect the inflorescence into a dense, compact white curd. Reached Europe from Cyprus around the 16th century and became one of the most commercially important brassica vegetables globally, prized for its mild flavour and versatile cooking properties.",
+    links: [
+      { label: "Nature Genetics 2024", url: "https://www.nature.com/articles/s41588-024-01744-4" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cauliflower" }
+    ]
+  },
+
+  "Romanesco": {
+    scientificName: "Brassica oleracea var. botrytis (Romanesco)",
+    parents: ["Cauliflower"],
+    category: "brassica",
+    emoji: "🥦",
+    description: "An Italian cultivar of the botrytis group, closely related to cauliflower, selected for lime-green colouration and its mathematically striking self-similar fractal spiral florets — each smaller bud replicates the shape of the whole head. Emerged in Italy during the 18th–19th century, likely through selection within cauliflower cultivation. The fractal geometry arises from the same arrested-inflorescence genetics as cauliflower but with incomplete developmental arrest producing the distinctive spiralling pattern.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Romanesco_broccoli" }
+    ]
+  },
+
+  "Chinese Broccoli": {
+    scientificName: "Brassica oleracea var. alboglabra",
+    parents: ["Wild Cabbage"],
+    category: "brassica",
+    emoji: "🥦",
+    description: "Also called gai lan, this Asian selection of B. oleracea arose around the 7th century AD after Mediterranean wild cabbage reached China via the Silk Road, with the earliest records appearing in 7th-century Buddhist texts. Selected independently in southern China (Guangdong Province) for tender flowering shoots and smooth, glossy leaves — a parallel domestication pathway to Italian broccoli from the same wild ancestor. Now fundamental to Cantonese and Southeast Asian cuisines.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gai_lan" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BRASSICA — Triangle of U interspecific hybrids
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Brassica napus": {
+    scientificName: "Brassica napus (AACC)",
+    parents: ["Wild Cabbage", "Brassica rapa"],
+    category: "brassica",
+    emoji: "🌾",
+    description: "An allotetraploid (AACC genome) that arose through ancient natural hybridisation between Wild Cabbage (CC) and Brassica rapa (AA). Domesticated into both rapeseed/canola (one of the world's most important oilseed crops, used for cooking oil and biofuel) and rutabaga/swede (a root vegetable). The Triangle of U model, proposed by Japanese botanist Woo Jang-choon in 1935, predicted this hybrid relationship decades before genomic confirmation.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_napus" }
+    ]
+  },
+
+  "Brassica juncea": {
+    scientificName: "Brassica juncea (AABB)",
+    parents: ["Brassica rapa", "Brassica nigra"],
+    category: "brassica",
+    emoji: "🌿",
+    description: "An allotetraploid (AABB genome) arising from hybridisation of Brassica rapa (AA) and Brassica nigra (BB), with the rapa genome providing the maternal origin. Also called Indian mustard or brown mustard, cultivated widely across South Asia and China for its pungent seeds (used in condiments and cooking oils) and tender young leaves. Its combination of rapa's cold-hardiness with nigra's pungency made it the dominant mustard crop of South and East Asia.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_juncea" }
+    ]
+  },
+
+  "Brassica carinata": {
+    scientificName: "Brassica carinata (BBCC)",
+    parents: ["Brassica nigra", "Wild Cabbage"],
+    category: "brassica",
+    emoji: "🌱",
+    description: "An allotetraploid (BBCC genome) arising from hybridisation of Brassica nigra (BB) and Wild Cabbage (CC), completing the three-vertex Triangle of U. Also called Ethiopian mustard, cultivated in Ethiopia and India for its oil-rich seeds and used as a leafy vegetable. The least commercially widespread of the three Triangle of U hybrid species, though gaining interest as a biofuel crop due to its high erucic acid content and drought tolerance.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brassica_carinata" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  COFFEE — Wild species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Coffea canephora": {
+    scientificName: "Coffea canephora",
+    parents: [],
+    category: "coffee",
+    emoji: "☕",
+    description: "Also known as Robusta — one of two wild diploid species (2n = 22) whose ancient hybridisation created Arabica coffee. Native to central Africa, with about 40% of global coffee production today. High caffeine content and natural disease resistance make it valuable for espresso blends and instant coffee, though its cup quality is considered lower than Arabica. It also appears as a second-time parent in the Timor Hybrid, where it introgressed back into the Arabica gene pool.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robusta_coffee" }
+    ]
+  },
+
+  "Coffea eugenioides": {
+    scientificName: "Coffea eugenioides",
+    parents: [],
+    category: "coffee",
+    emoji: "☕",
+    description: "The maternal diploid parent (2n = 22) of Arabica coffee — a wild species native to central Africa with smaller beans and a delicate, low-caffeine flavour profile. A 2024 Nature Genetics study confirmed it as the cytoplasmic (maternal) contributor in the natural allopolyploidy event that created Arabica coffee approximately 350,000–610,000 years ago. Rarely used commercially, but gaining interest among specialty roasters for its inherently low caffeine and unusual sweetness.",
+    links: [
+      { label: "Nature Genetics 2024", url: "https://www.nature.com/articles/s41588-024-01695-w" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Coffea_eugenioides" }
+    ]
+  },
+
+  "Coffea liberica": {
+    scientificName: "Coffea liberica",
+    parents: [],
+    category: "coffee",
+    emoji: "☕",
+    description: "A distinct coffee species native to western and central Africa, comprising a complex of genetically distinct types (including the Excelsa variant). Under 2% of global commercial coffee production, but growing in importance as a climate-resilient alternative: it thrives in waterlogged peat soils and high heat where Arabica and Robusta cannot survive. Produces distinctively large, asymmetric beans with a smoky, woody, sometimes jackfruit-like flavour profile unlike any Arabica.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Coffea_liberica" }
+    ]
+  },
+
+  "Coffea arabica": {
+    scientificName: "Coffea arabica",
+    parents: ["Coffea canephora", "Coffea eugenioides"],
+    category: "coffee",
+    emoji: "☕",
+    description: "The world's most cultivated coffee species — a natural allotetraploid (2n = 44) that arose spontaneously in the Ethiopian highlands through a single hybridisation event between Coffea canephora and Coffea eugenioides approximately 350,000–610,000 years ago. Accounts for 60–65% of global production with superior cup quality and aromatic complexity compared to Robusta. All Arabica cultivars descend from this single founding event, resulting in remarkably narrow genetic diversity across the entire species.",
+    links: [
+      { label: "Nature Genetics 2024", url: "https://www.nature.com/articles/s41588-024-01695-w" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Coffea_arabica" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  COFFEE — Foundational cultivars and landraces
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Typica": {
+    scientificName: "Coffea arabica 'Typica'",
+    parents: ["Coffea arabica"],
+    category: "coffee",
+    emoji: "☕",
+    description: "The original Arabica cultivar that spread globally — first collected from Yemen, then propagated through India, Java, Amsterdam, and the Caribbean before reaching the Americas. All early Western coffee traces through Typica, making it the founding cultivar of the global coffee industry. Parent (through mutation or crossing) of Bourbon, Maragogipe, Mundo Novo, and countless regional varieties; essentially the Adam of the Arabica family tree.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/typica" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Typica_(coffee)" }
+    ]
+  },
+
+  "Geisha": {
+    scientificName: "Coffea arabica 'Geisha'",
+    parents: ["Coffea arabica"],
+    category: "coffee",
+    emoji: "☕",
+    description: "An Ethiopian landrace collected from wild Arabica populations near the village of Gesha in southwestern Ethiopia in the 1930s, genetically distinct from the Typica/Bourbon lineage that dominates commercial coffee. Introduced to Central America via FAO and CATIE for disease resistance screening, largely forgotten for decades. Rose to global fame in 2004 when Hacienda La Esmeralda's Panama Geisha won international competitions, now routinely commanding the highest auction prices of any coffee variety.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Geisha_(coffee)" }
+    ]
+  },
+
+  "Bourbon": {
+    scientificName: "Coffea arabica 'Bourbon'",
+    parents: ["Typica"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A natural single-gene mutation of Typica that arose spontaneously on Réunion Island (formerly Bourbon Island) around 1708 after French traders introduced Typica plants. The mutation produces more compact growth and higher yields than Typica, with burgundy-coloured cherries and a sweeter, more complex cup. Bourbon is the second trunk of the Arabica family tree — parent of Caturra, Mundo Novo (with Typica), SL28, SL34, and numerous modern cultivars.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/bourbon" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bourbon_coffee" }
+    ]
+  },
+
+  "Maragogipe": {
+    scientificName: "Coffea arabica 'Maragogipe'",
+    parents: ["Typica"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A natural dominant mutation of Typica discovered in 1870 near the town of Maragogipe in Bahia, Brazil, producing giant 'elephant beans' more than twice the size of standard Arabica. Enlarged leaves and internodes accompany the giant fruit, creating a visually distinctive plant. Despite its unusual appearance and intriguing cup profile, Maragogipe suffers from very low yields. Distributed across Central and South America and used as a parent in the Pacamara cultivar.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/maragogipe" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Maragogipe_coffee" }
+    ]
+  },
+
+  "SL28": {
+    scientificName: "Coffea arabica 'SL28'",
+    parents: ["Bourbon"],
+    category: "coffee",
+    emoji: "☕",
+    description: "Selected in 1935 at Scott Agricultural Laboratories in Kabete, Kenya from a single tree in a population called Tanganyika Drought Resistant, sourced from Tanzania in 1931. Genetic testing confirms a Bourbon lineage with some additional genetic diversity of unclear origin. Prized for extraordinary cup complexity — blackcurrant, citrus, and tropical fruit notes — it became the flagship of Kenyan specialty coffee and one of the most celebrated varieties in the specialty world.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/sl28" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/SL28" }
+    ]
+  },
+
+  "SL34": {
+    scientificName: "Coffea arabica 'SL34'",
+    parents: ["Bourbon"],
+    category: "coffee",
+    emoji: "☕",
+    description: "Selected in the late 1930s from a single tree on the Loresho Estate in Kabete, Kenya, labelled 'French Mission' — indicating it originated from Bourbon seeds brought to East Africa by French missionaries. The French Mission designation confirms Bourbon lineage, distinguishing SL34 from SL28. Produces a rich, full-bodied cup with wine-like complexity; the second most celebrated Kenyan specialty variety and a core component of top Kenyan auction lots.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/sl34" }
+    ]
+  },
+
+  "Caturra": {
+    scientificName: "Coffea arabica 'Caturra'",
+    parents: ["Bourbon"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A single-gene dwarf mutation of Red Bourbon discovered on a farm in Minas Gerais, Brazil between 1915–1918 and officially classified in 1937. The 'compactism' mutation produces unusually short, bushy plants that can be planted at double the density of Bourbon, dramatically increasing yield per hectare. Became the dominant variety in Central American coffee production from the 1960s onward and a parent of Catuai and the disease-resistant Catimor hybrid.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/caturra" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Caturra_coffee" }
+    ]
+  },
+
+  "Mundo Novo": {
+    scientificName: "Coffea arabica 'Mundo Novo'",
+    parents: ["Typica", "Bourbon"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A natural hybrid of Typica and Bourbon discovered in 1943 in Mineiros do Tietê, São Paulo, Brazil. Selected and stabilised by Instituto Agronômico de Campinas (IAC) from 1943–1952, then distributed widely as a standard Brazilian variety. Combines vigorous growth, high yields, and climate adaptability, accounting for roughly 40% of Brazilian coffee production at its peak. The cross of two founding lineages makes it a key parent of Catuai.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/mundo-novo" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mundo_Novo_coffee" }
+    ]
+  },
+
+  "Catuai": {
+    scientificName: "Coffea arabica 'Catuai'",
+    parents: ["Mundo Novo", "Caturra"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A deliberate cross of Mundo Novo (female) and Caturra Amarelo (male) created in 1949 by Instituto Agronômico de Campinas in Brazil, officially introduced in 1972 after extensive selection. Combines Caturra's compact, high-density growth with Mundo Novo's vigour and productivity — inheriting both founding lineages of Arabica in a single cultivar. Available in red and yellow berry variants; now one of the most widely planted Arabica cultivars across Central and South America.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/catuai" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Catuaí" }
+    ]
+  },
+
+  "Timor Hybrid": {
+    scientificName: "Coffea arabica × Coffea canephora",
+    parents: ["Coffea arabica", "Coffea canephora"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A remarkable natural hybrid of Arabica and Robusta discovered in 1927 in an East Timor Typica plantation established in 1917 — a cross that should be nearly impossible given the different ploidy levels of the two species. Combines Arabica's cup quality with Robusta's resistance to coffee leaf rust (Hemileia vastatrix). Widely distributed to coffee institutes worldwide from the 1950s onward and became the foundational parent of all rust-resistant Catimor and Sarchimor breeding programmes.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/t8667" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Híbrido_de_Timor" }
+    ]
+  },
+
+  "Catimor": {
+    scientificName: "Coffea arabica 'Catimor'",
+    parents: ["Timor Hybrid", "Caturra"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A hybrid of Timor Hybrid and Red Caturra created in Portugal in 1959 and extensively developed from 1967 onward. A complex family of sub-varieties (including Costa Rica 95, Anacafe 14, and T8667) developed for specific regional conditions across Asia, Africa, and the Americas. Combines the Timor Hybrid's robust coffee leaf rust resistance with Caturra's dwarf, high-yield stature — making it the primary tool for rust-resistant coffee production in climate-challenged growing regions.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/catimor-129" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Catimor" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  AVOCADO — Wild species and ecological races
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Persea americana": {
+    scientificName: "Persea americana",
+    parents: [],
+    category: "avocado",
+    emoji: "🥑",
+    description: "The cultivated avocado species, domesticated in south-central Mexico at least 5,000 years ago from wild Persea relatives native to highland forests. Exists in three ecologically distinct races — Mexican, Guatemalan, and West Indian — that interbreed freely, with all modern commercial cultivars derived from crosses among them. Archaeological evidence from the Tehuacan Valley shows avocado consumption in Mexico dating back 10,000 years.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado" }
+    ]
+  },
+
+  "Mexican Race": {
+    scientificName: "Persea americana var. drymifolia",
+    parents: ["Persea americana"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "The highland Mexican race, originating in the mountains of south-central and western Mexico. Characterised by small elongated fruits (75–300 g) with thin smooth skin, anise-scented leaves (from the presence of estragole), very high oil content (10–30%), and exceptional cold hardiness down to −6°C — making it the most cold-tolerant race. The most genetically diverse of the three races and the ancestral source of cold-hardiness in modern hybrids.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Guatemalan Race": {
+    scientificName: "Persea americana var. guatemalensis",
+    parents: ["Persea americana"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "The highland Guatemalan race, native to the mountains of Guatemala and southern Mexico. Produces round, thick-skinned, slow-ripening fruits of medium size with intermediate oil content (10–20%). The dominant genetic contributor to most modern commercial cultivars including Hass (~39% Guatemalan), Reed (~90%), and Pinkerton (~98%). Thrives in subtropical climates and contributes the thick skin that gives Hass its characteristic shelf life.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "West Indian Race": {
+    scientificName: "Persea americana var. americana",
+    parents: ["Persea americana"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "The lowland tropical race, native to warm coastal regions and the Caribbean. Produces the largest avocado fruits with thin, smooth skin and lower oil content (3–10%), making them less rich than Mexican or Guatemalan types. The least cold-hardy race, thriving only in frost-free tropical conditions. Historically important in Caribbean and Central American commerce but largely displaced by Mexican–Guatemalan hybrids in modern global production.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  AVOCADO — Key cultivars
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Fuerte": {
+    scientificName: "Persea americana 'Fuerte'",
+    parents: ["Mexican Race", "Guatemalan Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A Mexican × Guatemalan hybrid discovered as a chance seedling in Atlixco, Mexico — a region where the two races had already been interbreeding for generations — and introduced to California in 1911 by plant explorer Carl Schmidt. 'Fuerte' means 'strong' in Spanish, named for its survival of the great California freeze of 1913 while other varieties died. The dominant commercial avocado worldwide before Hass overtook it in the 1970s and a foundational influence on California's avocado industry.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fuerte_avocado" }
+    ]
+  },
+
+  "Hass": {
+    scientificName: "Persea americana 'Hass'",
+    parents: ["Mexican Race", "Guatemalan Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A chance seedling discovered by mail carrier Rudolph Hass in his Whittier, California orchard in 1926 and patented in 1935. A 2019 PNAS whole-genome study confirmed Hass is approximately 61% Mexican and 39% Guatemalan, with distinct chromosomal blocks from each parent race. Now represents over 80% of global commercial avocado production — its pebbly, purpling skin, rich buttery flavour, and long shelf life made it the variety that transformed avocado from a regional curiosity into a global commodity.",
+    links: [
+      { label: "Herrera-Estrella et al. 2019 (PNAS)", url: "https://www.pnas.org/doi/10.1073/pnas.1822129116" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hass_avocado" }
+    ]
+  },
+
+  "Zutano": {
+    scientificName: "Persea americana 'Zutano'",
+    parents: ["Mexican Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A predominantly Mexican-type seedling selected in Fallbrook, California in 1926 and introduced commercially in 1941. Named after Juan Zutano, a friend of the original grower. Produces thin-skinned, shiny, pear-shaped fruit with a mild flavour and low oil content compared to Hass. Rarely eaten fresh today, but its Type-B flowering pattern (flowers open as female in the morning and male in the afternoon on alternating days) makes it widely planted as a pollinator companion for Type-A cultivars like Hass.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Bacon": {
+    scientificName: "Persea americana 'Bacon'",
+    parents: ["Mexican Race", "Guatemalan Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A Mexican × Guatemalan hybrid selected by James Bacon in Buena Park, California in 1954. Predominantly Mexican in ancestry (~70–80%), giving it the most cold hardiness of the major hybrid cultivars — tolerating brief frosts down to −4°C. Produces medium-sized, smooth-skinned green fruit with mild flavour and lower oil than Hass. Widely planted as a frost-tolerant pollinator (Type-B flower) alongside Hass in cooler California growing regions.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Reed": {
+    scientificName: "Persea americana 'Reed'",
+    parents: ["Guatemalan Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A predominantly Guatemalan seedling (~80–90% Guatemalan ancestry) selected by James S. Reed in Carlsbad, California in 1948 and patented in 1960. Produces very large, round fruit (up to 450 g) with thick skin, a small seed, and rich, nutty flavour that ripens in summer months. Remains on the tree for an extended period after maturity without deteriorating — a trait that allows growers to use the tree as a living storage facility and harvest on demand.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Pinkerton": {
+    scientificName: "Persea americana 'Pinkerton'",
+    parents: ["Guatemalan Race", "Hass"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "Documented as a Rincon × Hass cross discovered as a chance seedling by J. Pinkerton in Saticoy, California in the 1960s and patented in 1975. DNA analysis confirms Pinkerton is approximately 98% Guatemalan — the near-pure Guatemalan Rincon parent overwhelmed Hass's mixed ancestry. Produces large elongated fruit with a small seed (high flesh-to-seed ratio), pebbly green skin, and superior flavour. Prized for its very high flesh yield and becoming increasingly common in Israeli and South African export markets.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Wurtz": {
+    scientificName: "Persea americana 'Wurtz'",
+    parents: ["Mexican Race", "Guatemalan Race"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "A Mexican × Guatemalan dwarf hybrid discovered as a chance seedling in Encinitas, California around 1935 and introduced commercially in 1948, marketed as 'Little Cado.' The only widely available dwarf avocado cultivar, with a distinctive weeping growth habit that keeps the tree small enough for home garden or container growing. Despite its compact size, it produces full-sized fruit with good flavour — making it the choice for domestic gardeners across subtropical and Mediterranean-climate zones.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "Lamb Hass": {
+    scientificName: "Persea americana 'Lamb Hass'",
+    parents: ["Hass"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "An open-pollinated Hass-descended seedling (through the intermediate cultivar Gwen, itself a Hass grandchild) developed through UC Riverside's breeding programme and selected from 10,000 seedlings at the Bob Lamb Ranch, Camarillo in the late 1980s. Patented in 1996 (USPP9753). Produces larger fruit than Hass with excellent flavour and a later harvest window extending into late summer — filling a seasonal gap in the Hass supply calendar for California growers.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avocado#Varieties" }
+    ]
+  },
+
+  "GEM": {
+    scientificName: "Persea americana 'GEM'",
+    parents: ["Hass"],
+    category: "avocado",
+    emoji: "🥑",
+    description: "Released by UC Riverside in 2003 (designated '3-29-5'), GEM is descended from Hass through the intermediate cultivar Gwen, making it a Hass great-grandchild. Named to honour researcher Grey E. Martin. Produces attractive, high-quality fruit with flavour comparable to Hass but with a later harvest season extending into August and early September in California — allowing growers to spread production across a longer window and reduce price pressure during the Hass glut.",
+    links: [
+      { label: "UC Riverside", url: "https://avocado.ucr.edu/avocado-varieties" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BLUEBERRY — Wild species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Vaccinium corymbosum": {
+    scientificName: "Vaccinium corymbosum",
+    parents: [],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "The highbush blueberry, native to eastern North America from Nova Scotia to Florida and the primary wild ancestor of virtually all commercial blueberry cultivars. Domestication began in 1908 when Elizabeth Coleman White and USDA botanist Frederick Coville launched a systematic programme at Whitesbog, New Jersey to select superior wild bushes for fruit size and quality — transforming an uncultivated woodland fruit into one of North America's most important berry crops.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vaccinium_corymbosum" }
+    ]
+  },
+
+  "Vaccinium darrowii": {
+    scientificName: "Vaccinium darrowii",
+    parents: [],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A warm-climate, evergreen blueberry species native to Florida's woods and swamps. Contributes reduced chilling hour requirements and heat tolerance to Southern highbush hybrids — enabling blueberry cultivation across the Deep South and Mediterranean climates where Northern highbush cultivars cannot fruit adequately. Used extensively in University of Florida and USDA breeding programmes from the 1960s onward to create cultivars suited to hot, humid Southern conditions.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vaccinium_darrowii" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BLUEBERRY — Foundational wild selections
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Brooks": {
+    scientificName: "Vaccinium corymbosum 'Brooks'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A superior wild highbush selection discovered in July 1908 near the farm of Fred Brooks in Burlington County, New Jersey — one of the first plants identified in Elizabeth White and Frederick Coville's systematic wild selection programme. Selected using White's 'blueberry gage' screening tool for berries over 0.5 inches in diameter. Brooks appears in the parentage of 13 of the first 15 USDA blueberry releases, making it the single most influential genotype in the domestication of the blueberry.",
+    links: [
+      { label: "Arnold Arboretum", url: "https://arboretum.harvard.edu/stories/whitesbog-blues/" }
+    ]
+  },
+
+  "Rubel": {
+    scientificName: "Vaccinium corymbosum 'Rubel'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A wild highbush selection discovered in 1912 in the New Jersey Pinelands by Rube Leek, named by Elizabeth White and Coville by changing the final 'n' to 'l.' One of the most productive wild selections, with small-to-medium sweet-tart berries and vigorous growth. Still grown as a heritage variety today. Became a direct parent of both Rancocas and Jersey, and through Jersey, influenced Bluecrop and most subsequent Northern highbush genetics.",
+    links: [
+      { label: "Arnold Arboretum", url: "https://arboretum.harvard.edu/stories/whitesbog-blues/" }
+    ]
+  },
+
+  "Grover": {
+    scientificName: "Vaccinium corymbosum 'Grover'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A wild highbush selection named for Russell Grover, used by Frederick Coville in the first systematic blueberry crossing experiments starting in 1911–1913. One of the foundational cultivars whose crosses generated thousands of hybrid seedlings that formed the basis of the first named blueberry releases. Its most prominent offspring is Jersey (Rubel × Grover), one of the oldest cultivars still commercially grown today.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Sooy": {
+    scientificName: "Vaccinium corymbosum 'Sooy'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A wild highbush selection from the New Jersey Pinelands, one of the foundational plants in Coville and White's early breeding programme. Used by Coville as the second parent in the 1920 Pioneer release (Brooks × Sooy) — one of the first named hybrid blueberry cultivars. Like Brooks and Rubel, Sooy represents the small group of wild plants whose genetics underpin the entire modern commercial blueberry.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Stanley": {
+    scientificName: "Vaccinium corymbosum 'Stanley'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 1930 by Frederick Coville and named for his son, developed from New Jersey Pinelands wild material. Mid-to-late season with good yields of large, firm berries with excellent shipping qualities. Stanley became a critical parent in both Berkeley (1949) and Blueray (1955), contributing its firm-fruit and late-ripening traits to two of the mid-20th century's most important commercial cultivars.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Earliblue": {
+    scientificName: "Vaccinium corymbosum 'Earliblue'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Developed by Frederick Coville and released in 1952, one of the first truly early-ripening Northern highbush cultivars. Earliblue's most lasting contribution is as a parent of Duke (1987) — now the world's most commercially important early-season blueberry — in which Earliblue's early-ripening trait was successfully transferred into a high-yield, firm-fruited package suited to global export.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Ivanhoe": {
+    scientificName: "Vaccinium corymbosum 'Ivanhoe'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Introduced in 1952, a mid-season highbush cultivar with productive yields and good berry size. Ivanhoe's lasting significance is as one of the two parents of Duke (1987) — where it contributed vigour and productivity to complement Earliblue's early-ripening trait — making it an indirect ancestor of the most commercially dominant early-season blueberry in the world today.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Elizabeth": {
+    scientificName: "Vaccinium corymbosum 'Elizabeth'",
+    parents: ["Vaccinium corymbosum"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A Northern highbush cultivar named in honour of Elizabeth Coleman White, the New Jersey cranberry farmer who co-founded the blueberry domestication programme with Coville in 1908. Produces high-quality, flavourful berries and was used by USDA breeders as one parent of the Legacy cultivar (1993) — a bridge variety combining Northern highbush quality with the reduced chilling requirements needed for warmer growing regions.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  BLUEBERRY — Documented cultivar crosses
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Pioneer": {
+    scientificName: "Vaccinium corymbosum 'Pioneer'",
+    parents: ["Brooks", "Sooy"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 1920 by Frederick Coville as a cross of Brooks and Sooy — one of the very first named hybrid blueberry cultivars, representing the moment the blueberry crossed from wild selection into deliberate breeding. Pioneer's early ripening and productive habit made it a standard for commercial orchards in the Northeast and a critical parent of Bluecrop, the mid-century cultivar that shaped the modern blueberry industry.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Jersey": {
+    scientificName: "Vaccinium corymbosum 'Jersey'",
+    parents: ["Rubel", "Grover"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 1928 by Frederick Coville as a Rubel × Grover cross, one of the oldest Northern highbush cultivars still commercially grown today. Mid-season, with large, firm berries and excellent flavour. Jersey appears in the parentage of both Bluecrop (1952) and Blueray (1955) — making it doubly influential in the genetics of mid-20th century commercial blueberry production and one of the most consequential cultivars in blueberry history.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vaccinium_corymbosum" }
+    ]
+  },
+
+  "Bluecrop": {
+    scientificName: "Vaccinium corymbosum 'Bluecrop'",
+    parents: ["Jersey", "Pioneer", "Stanley"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released jointly by the USDA and Rutgers in 1952 from a 1934 cross combining Jersey and Pioneer (via the intermediate GM-37 line) with Stanley and June (via the intermediate CU-5 line). One of the most commercially successful highbush cultivars ever bred — mid-season, very productive, with large firm berries and excellent shelf life. Bluecrop shaped the modern commercial blueberry industry and remains one of the most widely planted varieties globally, particularly in Northern Europe.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bluecrop" }
+    ]
+  },
+
+  "Duke": {
+    scientificName: "Vaccinium corymbosum 'Duke'",
+    parents: ["Ivanhoe", "Earliblue"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 1987 by the USDA as an Ivanhoe × Earliblue cross, with a small contribution (about 4%) of Vaccinium angustifolium (lowbush blueberry) genetics providing cold hardiness. The first commercial variety to market each season — its very early ripening, combined with large firm berries and outstanding post-harvest shelf life, made it revolutionary for global fresh market export. Now the most commercially important early-season highbush cultivar worldwide, dominant in Southern Hemisphere production.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Duke_blueberry" }
+    ]
+  },
+
+  "Draper": {
+    scientificName: "Vaccinium corymbosum 'Draper'",
+    parents: ["Duke"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 2004 from the Michigan State University breeding programme as a cross of Duke with an elite USDA selection (G751), patented by Fall Creek Nurseries. Transfers G751's exceptionally firm, long-lasting post-harvest quality into Duke's early-season background. Now one of the fastest-growing commercial blueberry varieties globally, prized by exporters for the combination of early season, superior firmness, and attractive large berry size.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Blueberry" }
+    ]
+  },
+
+  "US 75": {
+    scientificName: "Vaccinium darrowii × V. corymbosum 'US 75'",
+    parents: ["Vaccinium darrowii", "Bluecrop"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A USDA breeding line created by crossing Vaccinium darrowii (the Southern evergreen blueberry) with Bluecrop, bridging Northern and Southern highbush genetics. Not grown commercially in its own right, but used by USDA breeders to transfer V. darrowii's reduced chilling hour requirement into the Northern highbush gene pool. Served as one parent of Legacy (1993), creating a cultivar that combines Northern highbush fruit quality with enough Southern adaptability to extend commercial production into warmer regions.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "Legacy": {
+    scientificName: "Vaccinium corymbosum 'Legacy'",
+    parents: ["Elizabeth", "US 75"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "Released in 1993 by the USDA and Rutgers as an Elizabeth × US 75 cross, where US 75 carries Vaccinium darrowii genetics through Bluecrop. Legacy bridges Northern and Southern highbush heritage — retaining large fruit size and excellent flavour from Elizabeth while reducing chilling requirements through the V. darrowii influence in US 75. Exhibits a semi-evergreen habit in mild climates and extended harvest season, making it valuable for fresh market production across transitional growing zones.",
+    links: [
+      { label: "Rutgers Blueberry History", url: "https://breeding.rutgers.edu/blueberry-history/" }
+    ]
+  },
+
+  "O'Neal": {
+    scientificName: "Vaccinium corymbosum × V. darrowii 'O'Neal'",
+    parents: ["Vaccinium corymbosum", "Vaccinium darrowii"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A Southern highbush hybrid combining Vaccinium corymbosum and V. darrowii genetics for very low chilling hour requirements (under 200 hours), enabling commercial blueberry production across Florida, Georgia, and other Southeastern states. Early blooming and early ripening, with large, sweet, firm berries. One of the most widely planted Southern highbush cultivars and a benchmark for the category — proving that high-quality blueberries could be grown commercially in warm climates previously considered unsuitable.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Blueberry" }
+    ]
+  },
+
+  "Star": {
+    scientificName: "Vaccinium corymbosum × V. darrowii 'Star'",
+    parents: ["Vaccinium corymbosum", "Vaccinium darrowii"],
+    category: "blueberry",
+    emoji: "🫐",
+    description: "A Southern highbush hybrid combining Vaccinium corymbosum and V. darrowii genetics, developed at the University of Florida for warm, humid climates with minimal winter chill. Alongside O'Neal, Emerald, and Jewel, Star formed the backbone of commercial Florida blueberry production for over a decade. Produces large, high-quality berries with excellent flavour and adapts well to the subtropical conditions of the Southeastern US.",
+    links: [
+      { label: "University of Florida EDIS", url: "https://edis.ifas.ufl.edu/publication/HS1245" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  KIWIFRUIT — Wild species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Fuzzy Kiwifruit": {
+    scientificName: "Actinidia deliciosa",
+    parents: [],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A hexaploid wild species (2n = 6x = 174) native to the Yangtze River valley of central China, first known to Europeans as 'Chinese Gooseberry.' Seeds were brought to New Zealand in 1904 by Isabel Fraser from a mission station in Yichang, and the resulting seedling plants became the genetic foundation of the entire modern kiwifruit industry. Renamed 'kiwifruit' by New Zealand marketers in 1959 to avoid the word 'Chinese' during Cold War export marketing.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Actinidia_deliciosa" }
+    ]
+  },
+
+  "Golden Kiwi": {
+    scientificName: "Actinidia chinensis",
+    parents: [],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A diploid wild species (2n = 2x = 58) native to south-central China with golden-yellow flesh and a distinctive tropical sweetness less acidic than the fuzzy kiwifruit. Historically less favoured for cultivation, it became commercially important in the 1990s when HortResearch New Zealand developed the first commercial golden cultivar (Hort16A). The diploid genome makes it simpler than the hexaploid fuzzy kiwifruit for controlled breeding programmes.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Actinidia_chinensis" }
+    ]
+  },
+
+  "Hardy Kiwi": {
+    scientificName: "Actinidia arguta",
+    parents: [],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A cold-tolerant wild kiwifruit species native to cool regions of East Asia, producing smooth-skinned, grape-sized fruits (2–3 cm) that can be eaten whole without peeling. Extremely vigorous vines that withstand temperatures below −20°C — far more cold-hardy than Actinidia deliciosa. The species remains largely unevaluated commercially compared to fuzzy kiwifruit, with Issai and Ken's Red among the earliest named selections for horticulture.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Actinidia_arguta" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  KIWIFRUIT — Fuzzy kiwi cultivars (Actinidia deliciosa)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Hayward": {
+    scientificName: "Actinidia deliciosa 'Hayward'",
+    parents: ["Fuzzy Kiwifruit"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "Selected by Hayward Wright in Avondale, Auckland around 1924 from seedling plants descended from Isabel Fraser's 1904 Chinese seed introduction. Large, oval fruit with excellent storage life (up to 8 months refrigerated) and a balanced sweet-tart flavour that set the commercial standard. First exported in 1952 and by 1975 had become the sole New Zealand export cultivar — a dominance it still holds today, with Hayward representing the vast majority of global fuzzy kiwifruit production.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kiwifruit" },
+      { label: "Te Ara NZ Encyclopedia", url: "https://teara.govt.nz/en/kiwifruit" }
+    ]
+  },
+
+  "Bruno": {
+    scientificName: "Actinidia deliciosa 'Bruno'",
+    parents: ["Fuzzy Kiwifruit"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "An early New Zealand selection from the original 1904 Chinese seed material, predating Hayward's formal selection. Produces large, elongated cylindrical fruits with dark green flesh and a strong kiwifruit flavour, ripening earlier than Hayward. One of six cultivars standardised by New Zealand's Fruit Research Division in the early 1950s. Now a minor commercial variety, primarily of historical significance as one of the pioneer selections that proved the Yangtze Valley material could produce commercially viable fruit in New Zealand.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kiwifruit" }
+    ]
+  },
+
+  "Abbott": {
+    scientificName: "Actinidia deliciosa 'Abbott'",
+    parents: ["Fuzzy Kiwifruit"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "An early-ripening selection from Isabel Fraser's 1904 Chinese introduction, one of six cultivars standardised by the New Zealand Fruit Research Division in the early 1950s for commercial assessment. Produces medium-sized fruits with juicy, sweet flesh and mild flavour, ripening earlier than Hayward but with shorter storage life. Remains in cultivation in New Zealand and parts of Asia, largely overshadowed commercially by Hayward's superior storage and uniformity.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kiwifruit" }
+    ]
+  },
+
+  "Allison": {
+    scientificName: "Actinidia deliciosa 'Allison'",
+    parents: ["Fuzzy Kiwifruit"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A selection named after Alexander Allison, one of the brothers who first cultivated Isabel Fraser's 1904 Chinese seeds in Wanganui — the Allison family's original three plants (two female, one male) were the founding stock from which all New Zealand commercial cultivars were subsequently selected. The Allison variety produces oval fruits with smooth green interior and a refreshing, mild flavour. Historically important as part of the founding population that proved kiwifruit could succeed in New Zealand.",
+    links: [
+      { label: "Te Ara NZ Encyclopedia", url: "https://teara.govt.nz/en/kiwifruit" }
+    ]
+  },
+
+  "Monty": {
+    scientificName: "Actinidia deliciosa 'Monty'",
+    parents: ["Fuzzy Kiwifruit"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A productive selection from the original 1904 Chinese seed introduction, one of six cultivars classified in the New Zealand Fruit Research Division's standardisation work in the early 1950s. Produces medium-sized fruits with pleasant sweetness and good adaptability to diverse growing climates. Now a minor commercial cultivar, primarily of historical significance in documenting the range of variation present in the original New Zealand founding population.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kiwifruit" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  KIWIFRUIT — Golden kiwi cultivars (Actinidia chinensis)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Hort16A": {
+    scientificName: "Actinidia chinensis 'Hort16A'",
+    parents: ["Golden Kiwi"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "The first commercially successful golden kiwifruit, developed through a planned breeding programme at HortResearch Auckland by crossing two A. chinensis selections from Chinese seed imports (1978 and 1981). Selected in 1991–92 and first marketed internationally by Zespri in 1997 as 'Zespri Gold.' Achieved premium prices for its tropical sweetness and distinctive golden flesh. Devastated after 2010 when Pseudomonas syringae pv. actinidiae (Psa bacterial canker) swept through plantings worldwide, necessitating its replacement.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gold_kiwifruit" }
+    ]
+  },
+
+  "Zespri SunGold": {
+    scientificName: "Actinidia chinensis 'Zesy002'",
+    parents: ["Golden Kiwi"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A PSA-resistant golden kiwi cultivar developed by Plant & Food Research New Zealand and released around 2010–12 to replace the Psa-susceptible Hort16A. Bred from controlled crosses of A. chinensis cultivars selected for disease tolerance while maintaining the premium tropical sweetness and golden flesh of its predecessor. Marketed by Zespri as 'SunGold', it has become the fastest-growing kiwifruit product globally, commanding consistent premium pricing for its distinctive flavour profile.",
+    links: [
+      { label: "Zespri", url: "https://www.zespri.com/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gold_kiwifruit" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  KIWIFRUIT — Hardy kiwi cultivars (Actinidia arguta)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Issai": {
+    scientificName: "Actinidia arguta 'Issai'",
+    parents: ["Hardy Kiwi"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A self-fertile hardy kiwi cultivar of Japanese origin — one of the first named selections made from Actinidia arguta for commercial horticulture. Unique in that female flowers possess functional male organs, allowing a single vine to set fruit without a separate male pollinator (though cross-pollination improves yield). Produces sweet, grape-sized fruits with smooth green skin and mild complex flavour. Hardy to at least −20°C, making it viable in cool temperate zones where standard fuzzy kiwifruit cannot survive winter.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Actinidia_arguta" }
+    ]
+  },
+
+  "Ken's Red": {
+    scientificName: "Actinidia melanandra × A. arguta 'Ken's Red'",
+    parents: ["Hardy Kiwi"],
+    category: "kiwi",
+    emoji: "🥝",
+    description: "A red-fleshed hardy kiwi interspecific hybrid developed in New Zealand by crossing Actinidia arguta with A. melanandra (or A. purpurea), producing a distinctive reddish-purple flesh colour from anthocyanin pigments absent in standard hardy kiwifruit. Produces grape-sized fruits with a sweet-tart flavour profile with pronounced aromatic notes. Extremely cold-hardy (to −40°C and below) and valued for both fresh eating and ornamental garden cultivation in cool climates.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Actinidia_arguta" }
+    ]
   }
 };
