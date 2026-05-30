@@ -1367,5 +1367,224 @@ const fruitData = {
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bhagwa_(pomegranate)" }
     ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEPPERS — Fundamental species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Capsicum annuum": {
+    scientificName: "Capsicum annuum",
+    parents: [],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "The most widely cultivated pepper species and ancestor of most common culinary peppers — bell peppers, jalapeños, poblanos, serranos, and cayenne. Domesticated in Mexico from the wild bird pepper (Capsicum annuum var. glabriusculum), with archaeological evidence of consumption dating to at least 5,000 BCE. Remarkable for its morphological diversity, spanning large sweet bells to tiny, fiery varieties across thousands of named cultivars.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Capsicum_annuum" }
+    ]
+  },
+
+  "Capsicum chinense": {
+    scientificName: "Capsicum chinense",
+    parents: [],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "The species behind the world's hottest peppers, including habanero, Scotch bonnet, ghost pepper, and Carolina Reaper. Despite the name suggesting Chinese origin — an 18th-century taxonomic error — it is native to the tropical Amazon basin and the Caribbean. Characterised by higher capsaicinoid content and more complex fruity, floral flavour profiles than other Capsicum species.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Capsicum_chinense" }
+    ]
+  },
+
+  "Capsicum frutescens": {
+    scientificName: "Capsicum frutescens",
+    parents: [],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A hot pepper species likely originating in Panama or southern Mexico, cultivated for centuries across Central America, the Caribbean, and eventually Southeast Asia. Best known as the species behind the Tabasco pepper and African bird's eye chilli. Closely related to C. chinense — the two hybridise in the wild, which is why the ghost pepper sits at their boundary.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Capsicum_frutescens" }
+    ]
+  },
+
+  "Capsicum baccatum": {
+    scientificName: "Capsicum baccatum",
+    parents: [],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A South American pepper species domesticated in the Andes of Peru and Bolivia, with archaeological evidence at Huaca Prieta dating cultivation back over 4,000 years. The species behind the ají peppers central to Andean and Peruvian cuisine, most notably ají amarillo. Distinguished by distinctive white flower spots and fruity, raisin-like flavour notes absent in other Capsicum species.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Capsicum_baccatum" }
+    ]
+  },
+
+  "Capsicum pubescens": {
+    scientificName: "Capsicum pubescens",
+    parents: [],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "The most genetically distinct domesticated Capsicum species, native to the Central Andes of Peru and Bolivia, with consumption evidence from Guitarrero Cave dating 8,000–10,000 years ago. Distinguished by hairy (pubescent) leaves, purple flowers, and black seeds — traits absent in all other cultivated Capsicum. Genetically incompatible with other domesticated Capsicum species, preventing any crossbreeding.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Capsicum_pubescens" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEPPERS — Cultivars
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Bell Pepper": {
+    scientificName: "Capsicum annuum 'Bell'",
+    parents: ["Capsicum annuum"],
+    category: "pepper",
+    emoji: "🫑",
+    description: "The world's most consumed pepper cultivar group, selected over centuries for complete loss of pungency (due to a recessive mutation in the capsaicin-producing pun1 gene), thick walls, and large blocky fruit. The green, red, yellow, and orange forms are the same cultivars at different ripeness stages rather than distinct varieties. A dietary staple eaten raw, roasted, or stuffed across most global cuisines.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bell_pepper" }
+    ]
+  },
+
+  "Jalapeño": {
+    scientificName: "Capsicum annuum 'Jalapeño'",
+    parents: ["Capsicum annuum"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A medium-heat Capsicum annuum landrace (2,500–8,000 SHU) named for Xalapa (Jalapa), capital of Veracruz, Mexico, which was historically a major trading centre for this variety. One of the most commercially important hot peppers in the world, used fresh, pickled, smoked as chipotle, and in hot sauces. When smoked and dried, the resulting chipotle is a distinct culinary product in its own right.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jalapeño" }
+    ]
+  },
+
+  "Serrano": {
+    scientificName: "Capsicum annuum 'Serrano'",
+    parents: ["Capsicum annuum"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A traditional Capsicum annuum cultivar originating in the mountains (sierra) of Puebla and Hidalgo, Mexico, giving it its name. Hotter than jalapeño at 10,000–23,000 SHU, with a bright, crisp bite and thin walls that make it ideal for fresh salsas rather than stuffing. One of the most common fresh hot peppers in Mexican cooking, often used raw in pico de gallo.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Serrano_pepper" }
+    ]
+  },
+
+  "Poblano": {
+    scientificName: "Capsicum annuum 'Poblano'",
+    parents: ["Capsicum annuum"],
+    category: "pepper",
+    emoji: "🫑",
+    description: "A large, mild Capsicum annuum cultivar (1,000–2,000 SHU) named for Puebla, Mexico, where it has been cultivated for centuries. Its thick, dark green walls make it the canonical pepper for chiles rellenos (stuffed peppers). When dried, the poblano is called ancho chile — a key ingredient in mole sauces — with both names referring to the same variety at different stages.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Poblano" }
+    ]
+  },
+
+  "Cayenne": {
+    scientificName: "Capsicum annuum 'Cayenne'",
+    parents: ["Capsicum annuum"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A hot, thin-walled Capsicum annuum cultivar (30,000–50,000 SHU) associated with Cayenne, French Guiana, though it was cultivated across South America long before European contact. One of the most globally distributed hot peppers, disseminated by Spanish and Portuguese traders in the 16th century to Africa, Asia, and Europe. Used almost exclusively dried and ground, cayenne powder is among the world's most ubiquitous spices.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cayenne_pepper" }
+    ]
+  },
+
+  "Tabasco": {
+    scientificName: "Capsicum frutescens 'Tabasco'",
+    parents: ["Capsicum frutescens"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A Capsicum frutescens landrace native to the Tabasco region of Mexico, notable for its erect, upward-pointing fruit growth habit and small, thin-walled, intensely hot pods. Brought to Louisiana in 1848 by Colonel Maunsell White and used by Edmund McIlhenny to create the Tabasco sauce brand (est. 1868), one of the world's oldest and best-known hot sauces. Commercial seed stock is exclusively maintained on Avery Island, Louisiana.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tabasco_pepper" }
+    ]
+  },
+
+  "Habanero": {
+    scientificName: "Capsicum chinense 'Habanero'",
+    parents: ["Capsicum chinense"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A Capsicum chinense cultivar (100,000–350,000 SHU) originating in the Amazon and spread to the Caribbean, where Havana (La Habana) became a major trade hub — giving the pepper its name. 18th-century botanists mistakenly thought the species came from China based on Caribbean trade routes, producing the misleading species name C. chinense. Its fruity, floral heat made it the world's hottest commercial pepper for decades and a direct ancestor of many superhot cultivars.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Habanero" }
+    ]
+  },
+
+  "Scotch Bonnet": {
+    scientificName: "Capsicum chinense 'Scotch Bonnet'",
+    parents: ["Capsicum chinense"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A Capsicum chinense cultivar (100,000–350,000 SHU) native to Jamaica and the English-speaking Caribbean, named for its distinctive ridged, bonnet-like shape resembling a Scottish tam o' shanter hat. Genetically close to habanero but with a noticeably sweeter flavour profile and higher sugar content, making it the defining pepper of Caribbean cooking — jerk seasoning, pepper sauces, and stews.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scotch_bonnet_(pepper)" }
+    ]
+  },
+
+  "Ghost Pepper": {
+    scientificName: "Capsicum chinense × C. frutescens",
+    parents: ["Capsicum chinense", "Capsicum frutescens"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "Indigenous to Assam, India, where it is known as Bhut jolokia ('ghost pepper' in Assamese). RAPD molecular analysis confirmed it is a natural interspecific hybrid carrying genetic material from both Capsicum chinense (primary parent) and C. frutescens (minor introgression). Certified by Guinness World Records as the world's hottest pepper in 2007 at over 1,000,000 SHU — until surpassed by cultivars bred specifically for maximum heat.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ghost_pepper" },
+      { label: "Bosland & Baral 2007 (HortScience)", url: "https://doi.org/10.21273/HORTSCI.42.2.222" }
+    ]
+  },
+
+  "Trinidad Moruga Scorpion": {
+    scientificName: "Capsicum chinense 'Trinidad Moruga Scorpion'",
+    parents: ["Capsicum chinense"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "A Capsicum chinense landrace cultivated for generations by farmers in Moruga, Trinidad, characterised by a curved 'stinger' tail and exceptionally high capsaicinoid content averaging over 1.2 million SHU, with some specimens exceeding 2 million. Measured as the world's hottest pepper by New Mexico State University in 2012. Represents an extreme in naturally selected pungency within C. chinense rather than a deliberately engineered modern hybrid.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Trinidad_Moruga_scorpion" },
+      { label: "Reyes et al. 2012 (HortTechnology)", url: "https://doi.org/10.21273/HORTTECH.22.4.534" }
+    ]
+  },
+
+  "Carolina Reaper": {
+    scientificName: "Capsicum chinense 'HP22B'",
+    parents: ["Ghost Pepper", "Habanero"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "Developed by Ed Currie at PuckerButt Pepper Company (Fort Mill, South Carolina) beginning around 2001, crossing a Pakistan Naga pepper with a La Soufrière habanero from Saint Vincent; designated HP22B during development and refined over multiple generations. Certified by Guinness World Records as the world's hottest pepper in 2013 at an average of 1,641,183 SHU, a record it held until 2023. Its wrinkled skin and scorpion-like tail are signature morphological traits.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Carolina_Reaper" }
+    ]
+  },
+
+  "Ají Amarillo": {
+    scientificName: "Capsicum baccatum var. pendulum 'Ají Amarillo'",
+    parents: ["Capsicum baccatum"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "The signature yellow-orange pepper of Peru, literally meaning 'yellow chilli,' with archaeological evidence of cultivation at Huaca Prieta dating back over 4,000 years. One of the 'holy trinity' of Peruvian cooking alongside red onion and garlic, used in ceviche, ají de gallina, and causa. Its flavour is distinctive — fruity and berry-like with moderate heat (30,000–50,000 SHU) — making it irreplaceable in Andean cuisine rather than simply a source of heat.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aji_amarillo" }
+    ]
+  },
+
+  "Pepper X": {
+    scientificName: "Capsicum chinense 'Pepper X'",
+    parents: ["Carolina Reaper"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "Developed by Ed Currie at PuckerButt Pepper Company as a cross between a Carolina Reaper and an undisclosed pepper sent to Currie by a friend — the second parent has not been publicly revealed. Certified by Guinness World Records in 2023 as the world's hottest pepper at an average of 2,693,000 SHU, surpassing the Carolina Reaper's long-held record. Currie noted that Pepper X's distinctive curves and ridges create extra surface area for the capsaicin-rich placental tissue to develop.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pepper_X" }
+    ]
+  },
+
+  "Rocoto": {
+    scientificName: "Capsicum pubescens 'Rocoto'",
+    parents: ["Capsicum pubescens"],
+    category: "pepper",
+    emoji: "🌶️",
+    description: "The primary cultivar of Capsicum pubescens, native to the Peruvian and Bolivian Andes with consumption evidence from Guitarrero Cave dating 8,000–10,000 years ago — among the earliest known pepper consumption records anywhere. Looks deceptively like a small apple or tomato but delivers serious heat (30,000–100,000 SHU). Its distinctive black seeds and genetic isolation from all other Capsicum species mean rocoto cannot be crossbred with any other domesticated pepper.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rocoto_pepper" }
+    ]
   }
 };
