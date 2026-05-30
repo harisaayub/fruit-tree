@@ -1586,5 +1586,389 @@ const fruitData = {
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rocoto_pepper" }
     ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  TOMATOES — Wild ancestor
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Solanum pimpinellifolium": {
+    scientificName: "Solanum pimpinellifolium",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "The wild currant tomato native to coastal Peru and Ecuador — the direct ancestor of all cultivated tomatoes. Tiny, pea-sized red fruits borne in clusters, intensely flavoured but with robust disease resistance that was lost during domestication. DNA evidence confirms that cultivated tomatoes (Solanum lycopersicum) were domesticated from this species in Mexico, and breeders have repeatedly crossed back to it to recover disease resistance — most notably in developing Pan America.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Solanum_pimpinellifolium" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  TOMATOES — Foundational cultivars (parentage undocumented)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Marvel": {
+    scientificName: "Solanum lycopersicum 'Marvel'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "An early-20th-century American tomato cultivar developed at USDA's Arlington Experiment Farm and selected for disease resistance and firm, uniform fruit suited to canning. One of the two direct parents of Marglobe — the most influential processing tomato of the mid-20th century — making Marvel a foundational node in American tomato breeding. Its own parentage is undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marglobe" }
+    ]
+  },
+
+  "Globe": {
+    scientificName: "Solanum lycopersicum 'Globe'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "An early American tomato cultivar used by USDA breeders at the Arlington Experiment Farm alongside Marvel to develop Marglobe. Selected for its large, globe-shaped fruit and good flavour — traits it contributed to its offspring. Its own parentage is undocumented.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marglobe" }
+    ]
+  },
+
+  "J.T.D.": {
+    scientificName: "Solanum lycopersicum 'J.T.D.'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "An early American tomato cultivar used by Lyman G. Schermerhorn at Rutgers University as the disease-resistant parent crossed with Marglobe to produce the Rutgers tomato. The cultivar name's origin is unclear and it is not independently described in the literature beyond its role in Rutgers' parentage.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rutgers_tomato" }
+    ]
+  },
+
+  "San Marzano": {
+    scientificName: "Solanum lycopersicum 'San Marzano'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "An Italian heirloom plum tomato originating near Naples, with records dating to the 1770s when seeds were reportedly a gift from the Kingdom of Peru to the Kingdom of Naples. Prized for its thick, dry flesh, few seeds, and balanced sweet-acid flavour — the defining ingredient for authentic Neapolitan pizza sauce. Holds DOP (Protected Designation of Origin) status and is the direct ancestor of the Roma tomato.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/San_Marzano_tomato" }
+    ]
+  },
+
+  "German Johnson": {
+    scientificName: "Solanum lycopersicum 'German Johnson'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "A large, pink-red heirloom tomato from West Virginia with origins in the late 1800s, known for meaty, low-acid flesh and potato-leaf foliage. Used by M.C. Byles ('Radiator Charlie') as the primary crossing parent in developing the Mortgage Lifter across the 1930s–40s. Genetically closely related to Brandywine and representative of the Appalachian heirloom tradition.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mortgage_Lifter" }
+    ]
+  },
+
+  "Beefsteak": {
+    scientificName: "Solanum lycopersicum 'Beefsteak'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "One of the oldest and largest American heirloom tomato types, first listed in Landreth's seed catalogue in 1890 though likely grown earlier. Characterised by very large, meaty, deeply ribbed fruit with few seeds. The original cultivar was one of the crossing parents Radiator Charlie used to develop Mortgage Lifter; today 'beefsteak' has become a generic descriptor for any large-fruited slicing tomato.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Beefsteak_tomato" }
+    ]
+  },
+
+  "Brandywine": {
+    scientificName: "Solanum lycopersicum 'Brandywine'",
+    parents: [],
+    category: "tomato",
+    emoji: "🍅",
+    description: "America's most celebrated heirloom tomato, traced to Amish farmers in Chester County, Pennsylvania, with records in seed catalogues dating to 1889. Famous for its exceptionally rich, complex flavour — routinely rated the best-tasting tomato — at the cost of yield, uniformity, and disease susceptibility. Exact parentage is undocumented, but it shares characteristic potato-leaf foliage with German Johnson, suggesting common heritage.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brandywine_(tomato)" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  TOMATOES — Documented crosses
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Marglobe": {
+    scientificName: "Solanum lycopersicum 'Marglobe'",
+    parents: ["Marvel", "Globe"],
+    category: "tomato",
+    emoji: "🍅",
+    description: "Developed by Frederick John Pritchard at USDA's Arlington Experiment Farm as a cross of Marvel and Globe, released in 1925. The first widely grown disease-resistant processing tomato, combining resistance to fusarium wilt and nail-head spot with reliable, uniform fruit — qualities that transformed commercial tomato growing across the eastern United States. Became the direct parent of Rutgers and Pan America, shaping decades of subsequent breeding.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marglobe" }
+    ]
+  },
+
+  "Rutgers": {
+    scientificName: "Solanum lycopersicum 'Rutgers'",
+    parents: ["J.T.D.", "Marglobe"],
+    category: "tomato",
+    emoji: "🍅",
+    description: "Developed by Lyman G. Schermerhorn at Rutgers University in partnership with Campbell Soup Company and released in 1934 as a cross of J.T.D. and Marglobe. Perfectly balanced for canning — high solids, deep red colour, and a precise acid-sugar ratio — it became Campbell's primary processing tomato for decades and dominated New Jersey agriculture. Recreated from archival seed stock in 2016 as 'Rutgers 250' to mark the university's 250th anniversary.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rutgers_tomato" }
+    ]
+  },
+
+  "Pan America": {
+    scientificName: "Solanum lycopersicum 'Pan America'",
+    parents: ["Marglobe", "Solanum pimpinellifolium"],
+    category: "tomato",
+    emoji: "🍅",
+    description: "Developed by William S. Porte at USDA's Beltsville Agricultural Research Center and released in 1941 as a deliberate cross between Marglobe and the wild currant tomato (Solanum pimpinellifolium). One of the earliest commercial cultivars to use wild-species introgression to recover disease resistance lost during domestication. Its genetics carried forward into the Roma tomato, bridging the wild ancestor and the modern processing tomato.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tomato" }
+    ]
+  },
+
+  "Roma": {
+    scientificName: "Solanum lycopersicum 'Roma'",
+    parents: ["San Marzano", "Pan America"],
+    category: "tomato",
+    emoji: "🍅",
+    description: "Developed by USDA Beltsville and released in 1955 by crossing San Marzano's plum-tomato shape and flavour with the disease resistance in Pan America's lineage (via an intermediate breeding line). The most commercially successful paste tomato in the United States — compact, determinate, with meaty flesh and low moisture ideal for sauces and canning. The global reference standard for plum tomatoes, widely grown across five continents.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Roma_tomato" }
+    ]
+  },
+
+  "Mortgage Lifter": {
+    scientificName: "Solanum lycopersicum 'Radiator Charlie's Mortgage Lifter'",
+    parents: ["German Johnson", "Beefsteak"],
+    category: "tomato",
+    emoji: "🍅",
+    description: "Developed by M.C. Byles ('Radiator Charlie') of Logan, West Virginia across the 1930s–40s by planting German Johnson and cross-pollinating with pollen from Beefsteak, an Italian variety, and an English variety over six seasons of selection. Byles sold the resulting plants for $1 each, paying off his $6,000 mortgage in six years — hence the name. Produces extremely large fruits (up to 2.3 kg) with rich, meaty flavour and remains one of America's most beloved heirloom tomatoes.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mortgage_Lifter" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEARS — Wild species
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Pyrus communis": {
+    scientificName: "Pyrus communis",
+    parents: [],
+    category: "pear",
+    emoji: "🍐",
+    description: "The European wild pear, native to central Asia and the Caucasus region, and the ancestral species of all European pear cultivars. Cultivated for at least 3,000 years — Homer described it as a 'gift of the gods' in the Odyssey — and dispersed westward by the Romans. White Doyenne, Bosc, Comice, Bartlett, and virtually every European commercial pear ultimately traces back to this species.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pyrus_communis" }
+    ]
+  },
+
+  "Pyrus pyrifolia": {
+    scientificName: "Pyrus pyrifolia",
+    parents: [],
+    category: "pear",
+    emoji: "🍐",
+    description: "The Asian or Nashi pear species native to China, Japan, and Korea, domesticated independently from the European pear tradition. Characterised by round, apple-like shape, crisp texture, and high water content — quite different from the soft, buttery European style. The parent species of Chojuro, Nijisseiki, and the other foundational Japanese cultivars that underpin modern Asian pear breeding.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pyrus_pyrifolia" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEARS — European foundational cultivars (chance seedlings / ancient selections)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "White Doyenne": {
+    scientificName: "Pyrus communis 'Doyenné Blanc'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "An ancient European pear cultivar recorded in cultivation since the 16th century, originally known as Doyenné Blanc. Molecular pedigree analysis by USDA researchers identified it as the single most influential parent in European pear history — ancestor of Bartlett, Anjou, Seckel, and many USDA-bred cultivars. Despite its pivotal genetic role, it is now rarely grown commercially due to its small fruit size.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/White_Doyenne_pear" }
+    ]
+  },
+
+  "Rousselet de Reims": {
+    scientificName: "Pyrus communis 'Rousselet de Reims'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A very old French pear cultivar known since at least the 17th century, small and russet-skinned with an intense, spiced flavour profile. Best known as the documented parent of the Seckel pear — one of the most important American pear cultivars — as confirmed by USDA molecular parentage analysis. Rarely grown today outside historical collections.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pear" }
+    ]
+  },
+
+  "Flemish Beauty": {
+    scientificName: "Pyrus communis 'Flemish Beauty'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Belgian chance seedling discovered around 1800, grown commercially throughout the 19th century for its large, handsome fruit and reliable cropping in cold climates. Used by American horticulturalist Thaddeus Clapp as one of the two documented parents of Clapp's Favourite — a cross with Bartlett. While somewhat superseded in commerce, it remains relevant as a cold-hardy rootstock and breeding parent.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flemish_Beauty_pear" }
+    ]
+  },
+
+  "Comice": {
+    scientificName: "Pyrus communis 'Doyenné du Comice'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A chance seedling discovered in 1849 at the Comice Horticole de Maine-et-Loire nursery in Angers, France, with unknown parentage. Widely regarded as the finest-flavoured European pear — buttery, sweet, and exceptionally juicy — and the cultivar most associated with luxury pear gifts. Used by USDA breeders as a parent of the fire-blight-resistant Magness pear (1968).",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Comice_pear" }
+    ]
+  },
+
+  "Bosc": {
+    scientificName: "Pyrus communis 'Beurré Bosc'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Belgian or French chance seedling first described in 1807 and named after the Belgian naturalist Louis Bosc. Recognised immediately by its distinctive elongated neck, cinnamon-brown russeted skin, and dense, crisp flesh that holds its shape when cooked — making it the preferred pear for poaching and baking. Despite extensive pedigree research, its parents remain unknown.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bosc_pear" }
+    ]
+  },
+
+  "Sucre Verte": {
+    scientificName: "Pyrus communis 'Sucre Verte'",
+    parents: ["Pyrus communis"],
+    category: "pear",
+    emoji: "🍐",
+    description: "An old French pear cultivar known for its sweet, green-skinned fruit. Identified by USDA molecular pedigree analysis as one of the two parents of the Anjou pear alongside White Doyenne. Now rarely grown in its own right but preserved in germplasm collections for its role in the ancestry of one of North America's most commercially important pears.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Anjou_pear" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEARS — European derived cultivars
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Bartlett": {
+    scientificName: "Pyrus communis 'Williams' Bon Chrétien'",
+    parents: ["White Doyenne"],
+    category: "pear",
+    emoji: "🍐",
+    description: "Discovered as a chance seedling in Aldermaston, England around 1770 by schoolmaster John Stair and later popularised by nurseryman Williams — giving it the British name Williams Bon Chrétien. USDA molecular analysis identified White Doyenne as one parent; the second is unknown. The most commercially important pear in the United States, where it was renamed after Enoch Bartlett of Massachusetts who distributed it widely from 1817.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bartlett_pear" }
+    ]
+  },
+
+  "Seckel": {
+    scientificName: "Pyrus communis 'Seckel'",
+    parents: ["Rousselet de Reims", "White Doyenne"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A small, exceptionally sweet American pear discovered as a chance seedling near Philadelphia around 1790 by farmer Jacob Seckel. USDA molecular pedigree analysis confirmed its parents as Rousselet de Reims and White Doyenne. Known as the 'sugar pear' for its intensely sweet, spiced flavour, it became a direct parent of the USDA's Magness cultivar and remains prized by connoisseurs despite its diminutive size.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seckel_pear" }
+    ]
+  },
+
+  "Anjou": {
+    scientificName: "Pyrus communis 'Beurré d'Anjou'",
+    parents: ["White Doyenne", "Sucre Verte"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Belgian or French pear first described in the early 1800s and named for the Anjou region of France. USDA molecular pedigree analysis confirmed its parents as White Doyenne and Sucre Verte. The second most commercially important pear in the United States after Bartlett — mild, juicy, and available in both green and red strains — with a notably long storage life that makes it ideal for the fresh market.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Anjou_pear" }
+    ]
+  },
+
+  "Clapp's Favourite": {
+    scientificName: "Pyrus communis 'Clapp's Favourite'",
+    parents: ["Bartlett", "Flemish Beauty"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A deliberately bred cross of Bartlett and Flemish Beauty developed by Thaddeus Clapp of Dorchester, Massachusetts and introduced around 1860 — one of the earliest documented intentional pear crosses in North America. Resembles Bartlett but ripens earlier and is more cold-hardy, making it valuable in shorter-season climates. Its mutation sport, Starkrimson, produced a distinctive red-skinned variant that became commercially popular.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clapp%27s_Favourite_pear" }
+    ]
+  },
+
+  "Magness": {
+    scientificName: "Pyrus communis 'Magness'",
+    parents: ["Seckel", "Comice"],
+    category: "pear",
+    emoji: "🍐",
+    description: "Developed by USDA breeders at Beltsville, Maryland as a cross of Seckel and Comice and released in 1968, named after USDA horticulturalist John Richard Magness. Combines the rich flavour of both parents with strong resistance to fire blight (Erwinia amylovora) — a devastating bacterial disease that limits pear growing in humid climates. Its pollen is sterile, preventing it from being used for further crossing.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Magness_pear" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEARS — Asian foundational cultivars (chance seedlings)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Chojuro": {
+    scientificName: "Pyrus pyrifolia 'Chōjūrō'",
+    parents: ["Pyrus pyrifolia"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Japanese Asian pear cultivar discovered as a chance seedling around 1890 and released in 1915, one of the oldest and most widely grown Asian pear varieties in Japan. Brown-skinned with a slightly coarse but very juicy flesh and a distinctive rich, butterscotch-like flavour unusual among Asian pears. A foundational parent in Japanese pear breeding — involved in producing Niitaka, Shinseiki, and many other cultivars.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chōjūrō" }
+    ]
+  },
+
+  "Nijisseiki": {
+    scientificName: "Pyrus pyrifolia 'Nijisseiki'",
+    parents: ["Pyrus pyrifolia"],
+    category: "pear",
+    emoji: "🍐",
+    description: "The 'Twentieth Century' pear, discovered as a chance seedling in Matsudo, Japan in 1888 and released commercially in 1904. Thin, yellow-green skin over crisp, very juicy, mildly sweet flesh — the definitive modern Asian pear type. One of the most influential parents in Japanese pear breeding, contributing to Shinseiki, Shinko, and indirectly to many further cultivars through its descendants.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nijisseiki_pear" }
+    ]
+  },
+
+  "Amanogawa": {
+    scientificName: "Pyrus pyrifolia 'Amanogawa'",
+    parents: ["Pyrus pyrifolia"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Japanese Asian pear cultivar ('Milky Way') used extensively as a crossing parent in 20th-century Japanese breeding programmes. Parentage of Amanogawa itself is undocumented — it is treated as a foundational cultivar in the breeding records. It appears as a parent in both Niitaka (with Chojuro) and Shinko (with Nijisseiki), making it a key connector in the Japanese pear family tree.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asian_pear" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  //  PEARS — Asian derived cultivars
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Shinseiki": {
+    scientificName: "Pyrus pyrifolia 'Shinseiki'",
+    parents: ["Nijisseiki", "Chojuro"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Japanese Asian pear bred at the Aichi Horticultural Experiment Station as a cross of Nijisseiki and Chojuro, released in 1945. The name means 'New Century' in Japanese, echoing its parent Nijisseiki ('Twentieth Century'). Early-ripening, with smooth yellow skin and crisp, mild, very juicy flesh — more disease-resistant than Nijisseiki, making it widely grown in Japan and exported to global markets.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Shinseiki_pear" }
+    ]
+  },
+
+  "Niitaka": {
+    scientificName: "Pyrus pyrifolia 'Niitaka'",
+    parents: ["Amanogawa", "Chojuro"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A large Japanese Asian pear bred as a cross of Amanogawa and Chojuro at the Aichi Horticultural Experiment Station and released in 1937. Parentage was disputed for decades but confirmed by SSR molecular marker analysis. Produces very large, russet-brown fruit with coarse but extremely juicy flesh — one of the dominant commercial cultivars in South Korea and widely grown in Japan and Taiwan.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asian_pear" }
+    ]
+  },
+
+  "Shinko": {
+    scientificName: "Pyrus pyrifolia 'Shinko'",
+    parents: ["Nijisseiki", "Amanogawa"],
+    category: "pear",
+    emoji: "🍐",
+    description: "A Japanese Asian pear bred as a cross of Nijisseiki and Amanogawa at the National Institute of Fruit Tree Science, Japan, and released in 1941. Paternal parentage was corrected via SSR molecular marker analysis, which overturned earlier records. Notable for excellent storage life and strong resistance to black spot disease — qualities that made it commercially important despite ripening later than most Japanese cultivars.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asian_pear" }
+    ]
   }
 };

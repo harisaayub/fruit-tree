@@ -24,6 +24,8 @@
   --banana:      #eab308;
   --pomegranate: #dc143c;
   --pepper:      #22c55e;
+  --tomato:      #ff6347;
+  --pear:        #a3e635;
   --shadow-sm:   0 2px 8px rgba(0,0,0,.4);
   --shadow-lg:   0 8px 32px rgba(0,0,0,.5);
   --glow-green:  0 0 20px rgba(94,240,160,.25);
@@ -239,6 +241,8 @@ header {
 .legend-dot.banana  { background: var(--banana);  box-shadow: 0 0 6px rgba(234,179,8,.5); }
 .legend-dot.pomegranate { background: var(--pomegranate); box-shadow: 0 0 6px rgba(220,20,60,.5); }
 .legend-dot.pepper      { background: var(--pepper);      box-shadow: 0 0 6px rgba(34,197,94,.5); }
+.legend-dot.tomato      { background: var(--tomato);      box-shadow: 0 0 6px rgba(255,99,71,.5); }
+.legend-dot.pear        { background: var(--pear);        box-shadow: 0 0 6px rgba(163,230,53,.5); }
 .legend-dot.ancient { background: var(--ancient); box-shadow: 0 0 6px rgba(134,196,110,.5); border: 1px dashed var(--ancient); }
 .legend-dot.extinct { background: var(--extinct); box-shadow: 0 0 6px rgba(196,145,106,.5); border: 1px dashed var(--extinct); }
 
@@ -371,6 +375,8 @@ main {
 .info-badge.banana      { background: rgba(234,179,8,.12);   color: #facc15; border-color: rgba(234,179,8,.3); }
 .info-badge.pomegranate { background: rgba(220,20,60,.12);  color: #f43f5e; border-color: rgba(220,20,60,.3); }
 .info-badge.pepper      { background: rgba(34,197,94,.12);  color: #4ade80; border-color: rgba(34,197,94,.3); }
+.info-badge.tomato      { background: rgba(255,99,71,.12);  color: #ff8c73; border-color: rgba(255,99,71,.3); }
+.info-badge.pear        { background: rgba(163,230,53,.12); color: #bef264; border-color: rgba(163,230,53,.3); }
 
 .info-desc {
   font-size: .8rem;
