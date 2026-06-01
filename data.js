@@ -249,6 +249,30 @@ const fruitData = {
     ]
   },
 
+  "Oroblanco": {
+    scientificName: "Citrus maxima × Citrus × paradisi",
+    parents: ["Pomelo", "Grapefruit"],
+    category: "citrus",
+    emoji: "🍋",
+    description: "A pomelo–grapefruit hybrid developed by H.B. Frost at UC Riverside's Citrus Research Center in 1958 and licensed to Sunkist in 1981 — one of the first patented citrus varieties in the United States. Marketed as 'Oroblanco' (Spanish for 'white gold') in the US and as 'Sweetie' in Israel and Europe. Nearly seedless with white flesh, very low naringin content, and essentially no bitterness — much sweeter and milder than grapefruit. Because grapefruit is itself a pomelo × sweet orange cross, Oroblanco back-crosses toward pomelo ancestry and carries roughly three-quarters pomelo genetics overall.",
+    links: [
+      { label: "UCR Citrus Variety Collection", url: "https://citrusvariety.ucr.edu/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Oroblanco" }
+    ]
+  },
+
+  "Melogold": {
+    scientificName: "Citrus maxima × Citrus × paradisi",
+    parents: ["Pomelo", "Grapefruit"],
+    category: "citrus",
+    emoji: "🍋",
+    description: "A sibling selection to Oroblanco from the same UC Riverside pomelo–grapefruit breeding programme, developed by H.B. Frost and licensed to Sunkist in 1986. Named to evoke honey ('melo') and gold. Produces larger fruit than Oroblanco with a thicker skin and slightly more grapefruit-like tartness, while remaining far less bitter than standard grapefruit. The two siblings represent the two main commercial outcomes of the UC Riverside programme; Oroblanco is the more internationally recognised name while Melogold is preferred in some specialty markets.",
+    links: [
+      { label: "UCR Citrus Variety Collection", url: "https://citrusvariety.ucr.edu/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Melogold" }
+    ]
+  },
+
   // ══════════════════════════════════════════════════════════════════════════
   //  APPLES — Fundamental species
   // ══════════════════════════════════════════════════════════════════════════
@@ -673,6 +697,18 @@ const fruitData = {
     ]
   },
 
+  "Gamay": {
+    scientificName: "Vitis vinifera 'Gamay Noir'",
+    parents: ["Pinot Noir", "Gouais Blanc"],
+    category: "grape",
+    emoji: "🍷",
+    description: "The light-bodied red grape of Beaujolais — and a genetic sibling of Chardonnay. DNA fingerprinting by Bowers and Meredith (UC Davis, 1997) confirmed that Gamay shares the exact same parents as Chardonnay (Pinot Noir × Gouais Blanc), meaning the grape behind Beaujolais Nouveau and the world's most popular white wine variety arose from the same accidental medieval cross. Gamay was famously banned from Burgundy by Duke Philip the Bold in 1395, who declared it an 'evil and disloyal plant' — an edict that ironically forced it into the Beaujolais region where it thrived.",
+    links: [
+      { label: "Bowers & Meredith 1997 (Nature Genetics)", url: "https://doi.org/10.1038/ng0597-84" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gamay" }
+    ]
+  },
+
   "Cabernet Sauvignon": {
     scientificName: "Vitis vinifera 'Cabernet Sauvignon'",
     parents: ["Cabernet Franc", "Sauvignon Blanc"],
@@ -1024,6 +1060,17 @@ const fruitData = {
     ]
   },
 
+  "Peacotum": {
+    scientificName: "Prunus persica × armeniaca × salicina",
+    parents: ["Peach", "Apricot", "Japanese Plum"],
+    category: "stone",
+    emoji: "🍑",
+    description: "A trademarked three-way interspecific hybrid developed by Floyd Zaiger at Zaiger Genetics (the same breeder behind the pluot and aprium) by crossing Peach, Apricot, and Japanese Plum genetics across multiple breeding generations. The name combines all three species: 'pea' (peach), 'co' (apricot), 'tum' (plum). Produces round, fuzzy-skinned fruit with golden-orange flesh, combining peach's aromatic fragrance, apricot's colour and sweetness, and plum's firmer texture and complex flavour. Where the pluot and aprium each blend two species, Peacotum is the only commercially sold three-species Prunus hybrid.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peacotum" }
+    ]
+  },
+
   "Black Republican Cherry": {
     scientificName: "Prunus avium 'Black Republican'",
     parents: ["Sweet Cherry"],
@@ -1219,6 +1266,17 @@ const fruitData = {
     links: [
       { label: "Ploetz 2015 (Phytopathology) — TR4 threat", url: "https://doi.org/10.1094/PHYTO-01-15-0003-FI" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cavendish_banana" }
+    ]
+  },
+
+  "Plantain": {
+    scientificName: "Musa × paradisiaca (ABB/AAB genome group)",
+    parents: ["Musa acuminata", "Musa balbisiana"],
+    category: "banana",
+    emoji: "🍌",
+    description: "A group of cooking bananas whose genome combines Musa acuminata (A) and Musa balbisiana (B) — genetically distinct from the Cavendish, which is a pure AAA (acuminata-only) triploid. The most common plantains carry two B genomes (ABB), giving them high starch, low sugar, and a starchy texture that makes them entirely unsuitable for raw eating. A dietary staple for over 500 million people across tropical West Africa, the Caribbean, and Central and South America, where plantains are consumed fried, boiled, baked, and dried at every stage of ripeness from green to black.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cooking_banana" }
     ]
   },
 
@@ -2283,6 +2341,32 @@ const fruitData = {
   },
 
   // ══════════════════════════════════════════════════════════════════════════
+  //  BRASSICA — Intraspecific cultivar hybrids (B. oleracea × B. oleracea)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  "Broccolini": {
+    scientificName: "Brassica oleracea var. italica × alboglabra",
+    parents: ["Broccoli", "Chinese Broccoli"],
+    category: "brassica",
+    emoji: "🥦",
+    description: "Developed by Sakata Seed Company of Japan in 1993 as a deliberate F1 cross between broccoli (var. italica) and Chinese broccoli / gai lan (var. alboglabra) — both varieties of the same species, making this an intraspecific hybrid. First sold under the Japanese brand name 'Aspabroc'; later trademarked as 'Broccolini' in the United States by Mann Packing Company and also marketed as 'Baby Broccoli'. The Chinese broccoli parent contributes long, slender edible stems and a milder, slightly sweet flavour, while the broccoli parent provides the loose floret structure; the combined result cooks faster and tastes less bitter than standard broccoli.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Broccolini" }
+    ]
+  },
+
+  "Kalette": {
+    scientificName: "Brassica oleracea var. gemmifera × sabellica",
+    parents: ["Brussels Sprouts", "Kale"],
+    category: "brassica",
+    emoji: "🌿",
+    description: "A deliberate F1 hybrid between Brussels sprouts (var. gemmifera) and kale (var. sabellica), developed by Tozer Seeds Ltd (UK) over roughly 15 years beginning in 2000 and first released commercially around 2010–2012. Marketed as 'Flower Sprouts' in the UK and as 'Kalettes' in North America. Rather than forming the tight compact head of Brussels sprouts, the hybrid produces open, frilly rosette-like sprouts with the curled kale-like leaf margins of its other parent — combining Brussels sprouts' sweet nuttiness with kale's robustness, and edible both raw and roasted.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kalette" }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   //  BRASSICA — Triangle of U interspecific hybrids
   // ══════════════════════════════════════════════════════════════════════════
 
@@ -2500,6 +2584,30 @@ const fruitData = {
     links: [
       { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/catimor-129" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Catimor" }
+    ]
+  },
+
+  "Villa Sarchi": {
+    scientificName: "Coffea arabica 'Villa Sarchi'",
+    parents: ["Bourbon"],
+    category: "coffee",
+    emoji: "☕",
+    description: "A natural dwarf mutation of Bourbon discovered in the early 1960s at a farm in Villa Sarchi de Naranjo, Alajuela, Costa Rica — a compact dwarf mutation analogous to Caturra but arising independently from a different gene. Grows as a dense, high-yielding, wind-resistant bush well-adapted to the high-altitude volcanic soils of Costa Rica and Central America. Produces a clean, sweet cup with good complexity typical of Bourbon-lineage varieties. Primarily significant today as the foundational parent of Sarchimor, the rust-resistant hybrid that bears its name.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/villa-sarchi" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Villa_Sarchi_(coffee)" }
+    ]
+  },
+
+  "Sarchimor": {
+    scientificName: "Coffea arabica 'Sarchimor (T5296)'",
+    parents: ["Villa Sarchi", "Timor Hybrid"],
+    category: "coffee",
+    emoji: "☕",
+    description: "Created at CIRAD's research station in Portugal in the 1970s by crossing Villa Sarchi with Timor Hybrid — the companion programme to Catimor (Caturra × Timor Hybrid), using the Costa Rican Bourbon dwarf in place of the Brazilian Bourbon dwarf. Inherits strong coffee leaf rust resistance from the Timor Hybrid parent while pairing it with Villa Sarchi's Bourbon-lineage cup quality and compact stature. Distributed globally and developed into numerous named sub-varieties including Cauvery (India), Marsellesa (Central America), and Obatã (Brazil), making Sarchimor alongside Catimor one of the two pillars of rust-resistant Arabica breeding worldwide.",
+    links: [
+      { label: "World Coffee Research", url: "https://varieties.worldcoffeeresearch.org/varieties/sarchimor" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sarchimor" }
     ]
   },
 
